@@ -14,10 +14,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:src="@drawable/taraz"/>
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="180dp"-->
+                    <!--android:src="@drawable/taraz" />-->
 
                 <ScrollView
                     android:layout_width="match_parent"
@@ -169,17 +169,24 @@
                                     android:src="@drawable/ic_flight_takeoff_black_24dp"
                                     android:paddingTop="15dp"
                                     android:paddingRight="15dp"/>
-
-                                <AutoCompleteTextView
-                                    android:id="@+id/txtRoundFrom"
-                                    android:layout_width="match_parent"
+                                <!--<AutoCompleteTextView-->
+                                    <!--android:id="@+id/txtRoundFrom"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:hint="@string/prompt_flyingfrom"-->
+                                    <!--android:textSize="18sp"-->
+                                    <!--android:inputType="text"-->
+                                    <!--android:maxLines="1"-->
+                                    <!--android:singleLine="true"-->
+                                    <!--android:fontFamily="sans-serif"/>-->
+                                <Spinner
+                                    android:id="@+id/spinner_items_from"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:hint="@string/prompt_flyingfrom"
-                                    android:textSize="18sp"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:fontFamily="sans-serif"/>
+                                    android:entries="@array/spinner_items_from"
+                                    >
+
+                                </Spinner>
 
                             </LinearLayout>
 
@@ -199,16 +206,23 @@
                                     android:paddingTop="15dp"
                                     android:paddingRight="15dp"/>
 
-                                <AutoCompleteTextView
-                                    android:id="@+id/txtRoundTo"
-                                    android:layout_width="match_parent"
+                                <Spinner
+                                    android:id="@+id/spinner_items_to"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:hint="@string/prompt_flyingto"
-                                    android:textSize="18sp"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:fontFamily="sans-serif"/>
+                                    android:entries="@array/spinner_items_to">
+                                </Spinner>
+
+                                <!--<AutoCompleteTextView-->
+                                    <!--android:id="@+id/txtRoundTo"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:hint="@string/prompt_flyingto"-->
+                                    <!--android:textSize="18sp"-->
+                                    <!--android:inputType="text"-->
+                                    <!--android:maxLines="1"-->
+                                    <!--android:singleLine="true"-->
+                                    <!--android:fontFamily="sans-serif"/>-->
 
                             </LinearLayout>
 

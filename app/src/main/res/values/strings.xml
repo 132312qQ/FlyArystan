@@ -26,6 +26,22 @@
     <string name="prompt_first_name">First Name</string>
     <string name="prompt_last_name">Last Name</string>
     <string name="alert_dialog_two_buttons_title">My Title</string>
+    <string-array name="spinner_items_from">
+        <item>Павлодар</item>
+        <item>Уральск</item>
+        <item>Караганда</item>
+        <item>Алматы</item>
+        <item>Тараз</item>
+        <item>Нур-Султан</item>
+        <item>Шымкент</item>
+    </string-array>
+
+    <string-array name="spinner_items_to">
+
+        <item>Алматы</item>
+    </string-array>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
