@@ -12,7 +12,7 @@ function getPrice(req, res) {
     const browser = await puppeteer.launch({headless: false, args: ['--disable-dev-shm-usage']});
     const page = await browser.newPage();
     
-    await page.setViewport({ width: 1600, height: 800 })
+    await page.setViewport()
    
     try{
         await page.goto('https://flyarystan.com/',{ timeout: 120000, waitUntil: 'networkidle0', waitUntil: "load" });
@@ -159,8 +159,72 @@ function readyBuy(req, res) {
         await page.waitForSelector(clickContinue);
         await page.evaluate((clickContinue) => document.querySelector(clickContinue).click(), clickContinue);
         
+        // buy info from UI
+        var gender1 = "#gender1"
+        await page.waitForSelector(gender1)
+        // document.querySelector(gender1).selectedIndex = 1; // input from  
+        // if male  = 1
+        // if women = 2        
+        await page.$eval(gender1, (el, value) => el.selectedIndex = value, req.query.gender);
+
+        var name1 = "#name1"
+        await page.$eval(name1, (el, value) => el.value = value, req.query.name);
+
+        var surname1 = "#surname1"
+        await page.$eval(surname1, (el, value) => el.value = value, req.query.surname);
+
+        var day1 = "#bday_day_1"    
+        await page.$eval(day1, (el, value) => el.selectedIndex = value, req.query.day);
+
+        var month1 = "#bday_month_1"    
+        await page.$eval(month1, (el, value) => el.selectedIndex = value, req.query.month);
+
+        var year1 = "#bday_year_1"
+        await page.$eval(year1, (el, value) => el.value = value, req.query.year);
+        
+        var nationality1 = "#nationality1"
+        await page.$eval(nationality1, (el, value) => el.value = value, req.query.nation);
+
+        var documentType1 = "#documentType1"
+        await page.$eval(documentType1, (el, value) => el.value = value, req.query.doctype);
+
+
+        var againName =  "#contact_name0"
+        await page.$eval(againName, (el, value) => el.value = value, req.query.name);
+
+        var againSurname = "#contact_surname0"
+        await page.$eval(againSurname, (el, value) => el.value = value, req.query.surname);
+
+        /* lol kek
+        // var documentNumber = "#natId"
+        // await page.waitFor(2500)
+        // await page.$eval(documentNumber, (el, value) => el.value = value, req.query.docnumber); */
+
+        var tel = "#frst-tel-number0"
+        await page.focus(tel)
+        page.keyboard.type(req.query.tel)
+        await page.waitFor(500)
+        var email = "#email0"
+        await page.focus(email)
+        page.keyboard.type(req.query.email)
+        await page.waitFor(1000)
+        
+        var clickContinue2 = "#btnSave"
+        await page.click(clickContinue2)
+        
+        var clickContinue3 = "#addSSRContinueBTn"
+        await page.waitForSelector(clickContinue3)
+        await page.click(clickContinue3)
+
+        var clickContinue4 = "#myModal > div > div > div.modal-footer > button"
+        await page.waitFor(2000)
+
+        await page.click(clickContinue3)
+        await page.waitFor(300)
+        
 
         
+
     }
     catch(error){
         //browser.close();
