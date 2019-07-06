@@ -26,34 +26,29 @@
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
-            <Spinner
-            android:id="@+id/spinner_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
+            <Spinner
+                android:id="@+id/spinner_status"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:spinnerMode="dialog"
+                android:prompt="@string/status">
         </Spinner>
-            <Spinner
-                android:id="@+id/spinner_surname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </Spinner>
             <EditText
-                android:id="@+id/et_childName"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="status"
-                android:inputType="textPersonName"
+                android:hint="Имя"
+                android:inputType="text"
                 />
-
             <EditText
-                android:id="@+id/et_childDOB"
+                android:id="@+id/surname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Surname"
-                android:inputType="date"
+                android:hint="Фамилия"
+                android:inputType="text"
                 />
         </LinearLayout>
         <TextView
@@ -71,21 +66,29 @@
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
+            <Spinner
+                android:id="@+id/spinner_day"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:spinnerMode="dialog"
+                android:prompt="@string/day"
+                >
+            </Spinner>
+            <Spinner
+                android:id="@+id/spinner_month"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:spinnerMode="dialog"
+                android:prompt="@string/month"
+                >
+            </Spinner>
             <EditText
-                android:id="@+id/et_childParentName"
+                android:id="@+id/year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Status"
-                android:inputType="textPersonName"
-                />
-            <EditText
-                android:id="@+id/et_childParentNum"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Language"
-                android:inputType="phone"
+                android:hint="Год"
+                android:inputType="text"
                 />
 
         </LinearLayout>
@@ -94,7 +97,7 @@
             android:layout_height="wrap_content"
             android:background="@color/background_pink"
             android:padding="10dp"
-            android:text="Dateeeee"
+            android:text="Информация"
             android:textColor="#fff"
             android:textSize="18dp" />
         <LinearLayout
@@ -104,22 +107,21 @@
             android:paddingRight="10dp"
             android:paddingLeft="10dp">
             <EditText
-                android:id="@+id/et_childMeds"
+                android:id="@+id/tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Date"
-                android:inputType="text"
+                android:hint="Номер Телефона"
+                android:inputType="date"
                 />
             <EditText
                 android:id="@+id/et_childAllergy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Expire Date"
+                android:hint="Электронный Адрес"
                 android:inputType="text"
                 />
-
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
@@ -129,7 +131,6 @@
             android:text="Verification"
             android:textColor="#fff"
             android:textSize="18dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

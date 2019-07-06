@@ -35,15 +35,6 @@ public interface TicketApi {
             @Query("_order") String order
     );
 
-//    @POST("posts")
-//    Call<Ticket> createPost(@Body Ticket ticket);
-
-//    @FormUrlEncoded
-//    @POST("posts")
-//    Call<Ticket> createPost(
-//            @Field("to") String to,
-//            @Field("from") String from
-//    );
 
     @FormUrlEncoded
     @POST("price")

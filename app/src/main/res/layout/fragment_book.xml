@@ -14,19 +14,10 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@drawable/taraz"/>
 
-                <TextView
-                    android:id="@+id/text_view_result"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:text="Just do it"
-                    android:textSize="20dp"
-                    android:textAlignment="center"
-                    />
+
+
+
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -311,5 +302,7 @@
             android:fontFamily="sans-serif"/>
 
     </RelativeLayout>
+
+
 
 </FrameLayout>

@@ -108,8 +108,8 @@ public class BookFragment extends Fragment{
     private void createPost(String from,String to) {
         //Post post = new Post(23, "New Title", "New Text");
         Map<String, String> fields = new HashMap<>();
-        fields.put("to", from);
-        fields.put("from", to);
+        fields.put("to", to);
+        fields.put("from", from);
 
         Call<Ticket> call = ticketApi.createPost(fields);
 

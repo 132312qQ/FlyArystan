@@ -27,7 +27,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
             <EditText
-                android:id="@+id/et_childName"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -36,12 +36,12 @@
                 />
 
             <EditText
-                android:id="@+id/et_childDOB"
+                android:id="@+id/surname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Surname"
-                android:inputType="date"
+                android:inputType="text"
                 />
         </LinearLayout>
         <TextView
@@ -60,19 +60,19 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
             <EditText
-                android:id="@+id/et_childParentName"
+                android:id="@+id/birth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Status"
+                android:hint="Birth"
                 android:inputType="textPersonName"
                 />
             <EditText
-                android:id="@+id/et_childParentNum"
+                android:id="@+id/national_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Language"
+                android:hint="National Id"
                 android:inputType="phone"
                 />
 
@@ -92,15 +92,15 @@
             android:paddingRight="10dp"
             android:paddingLeft="10dp">
             <EditText
-                android:id="@+id/et_childMeds"
+                android:id="@+id/passport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Date"
+                android:hint="Passport"
                 android:inputType="text"
                 />
             <EditText
-                android:id="@+id/et_childAllergy"
+                android:id="@+id/expire_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -125,7 +125,7 @@
             android:paddingRight="10dp"
             android:paddingLeft="10dp">
             <EditText
-                android:id="@+id/et_childMeds1"
+                android:id="@+id/mail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -133,7 +133,16 @@
                 android:inputType="text"
                 />
             <EditText
-                android:id="@+id/et_childAllerg1"
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Mobile"
+                android:inputType="text"
+                />
+
+            <EditText
+                android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -142,7 +151,7 @@
                 />
 
             <EditText
-                android:id="@+id/et_childNotes"
+                android:id="@+id/password2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -154,10 +163,10 @@
 
         <Button
             android:layout_gravity="bottom"
-            android:id="@+id/btn_child_profile_save"
+            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Profile"
+            android:text="Register Profile"
             android:theme="@style/ButtonTheme"
             android:textSize="18sp"
             android:layout_marginTop="10dp"

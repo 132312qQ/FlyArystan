@@ -3,21 +3,21 @@ package com.example.fly_arystan.Model;
 public class UserRegister {
     private String name;
     private String surname;
-    private String status;
-    private String lang;
-    private String date;
+    private String birth;
+    private String national_id;
+    private String passport;
     private String expite_date;
     private String mail;
     private String mobile;
     private String password1;
     private String password2;
 
-    public UserRegister(String name, String surname, String status, String lang, String date, String expite_date, String mail, String mobile, String password1, String password2) {
+    public UserRegister(String name, String surname,String birth,String national_id,String passport,String expite_date, String mail, String mobile, String password1, String password2) {
         this.name = name;
         this.surname = surname;
-        this.status = status;
-        this.lang = lang;
-        this.date = date;
+        this.birth = birth;
+        this.national_id = national_id;
+        this.passport = passport;
         this.expite_date = expite_date;
         this.mail = mail;
         this.mobile = mobile;
@@ -25,24 +25,21 @@ public class UserRegister {
         this.password2 = password2;
     }
 
+
     public String getName() {
         return name;
+    }
+
+    public String getNational_id() {
+        return national_id;
     }
 
     public String getSurname() {
         return surname;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public String getLang() {
-        return lang;
-    }
-
-    public String getDate() {
-        return date;
+    public String getBirth() {
+        return birth;
     }
 
     public String getExpite_date() {
