@@ -15,10 +15,11 @@
     <string name="prompt_confirm_password">Confirm Password</string>
     <string name="action_login">Login</string>
     <string name="action_register">Register</string>
+    <string name="flightnumber">Номер бронирования</string>
 
 
-    <string name="prompt_flyingfrom">Flying from</string>
-    <string name="prompt_flyingto">Flying to</string>
+    <string name="prompt_flyingfrom">Откуда</string>
+    <string name="prompt_flyingto">Куда</string>
     <string name="prompt_departure_date">Departure date</string>
     <string name="prompt_return_date">Return date</string>
     <string name="prompt_traveller">Select Traveller</string>
@@ -26,6 +27,10 @@
     <string name="prompt_first_name">First Name</string>
     <string name="prompt_last_name">Last Name</string>
     <string name="alert_dialog_two_buttons_title">My Title</string>
+    <string name="name">Имя</string>
+    <string name="sname">Фамилия</string>
+    <string name="regFlight">Регистрация на рейс</string>
+    <string name="checkFlight">Проверить статус</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -165,16 +165,10 @@
                                     android:paddingTop="15dp"
                                     android:paddingRight="15dp"/>
 
-                                <AutoCompleteTextView
-                                    android:id="@+id/txtRoundFrom"
+                                <Spinner
+                                    android:id="@+id/spinner_flight_from"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/prompt_flyingfrom"
-                                    android:textSize="18sp"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:fontFamily="sans-serif"/>
+                                    android:layout_height="match_parent"></Spinner>
 
                             </LinearLayout>
 
@@ -194,16 +188,11 @@
                                     android:paddingTop="15dp"
                                     android:paddingRight="15dp"/>
 
-                                <AutoCompleteTextView
-                                    android:id="@+id/txtRoundTo"
+                                <Spinner
+                                    android:id="@+id/spinner_flight_to"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/prompt_flyingto"
-                                    android:textSize="18sp"
-                                    android:inputType="text"
-                                    android:maxLines="1"
-                                    android:singleLine="true"
-                                    android:fontFamily="sans-serif"/>
+                                    android:layout_height="match_parent"></Spinner>
+
 
                             </LinearLayout>
 
