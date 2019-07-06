@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fixed_contact"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:background="@null"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db"/>
+        <TextView
+            android:id="@+id/timeGo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TimeGO"
+            android:background="@null"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db"/>
+
+        <TextView
+            android:id="@+id/timeOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TimeOut"
+            android:background="@null"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f9d7db"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/no_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backdround_login"
+                android:text="cancel"
+                android:layout_margin="5dp"
+                android:textColor="@color/colorAccent" />
+            <Button
+                android:id="@+id/yes_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/no"
+                android:background="@drawable/backdround_login"
+                android:text="buy"
+                android:layout_margin="5dp"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

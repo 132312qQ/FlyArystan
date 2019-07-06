@@ -1,221 +1,207 @@
 package com.example.fly_arystan;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.Spinner;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.example.fly_arystan.Api.TicketApi;
+import com.example.fly_arystan.Model.Ticket;
+
+import java.io.IOException;
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class BookFragment extends Fragment  implements View.OnClickListener {
+public class BookFragment extends Fragment implements DatePickerDialog.OnDateSetListener {
     List<String> listImages = new ArrayList<>();
-    private Spinner countriesSpinnerFrom, countriesSpinnerTo ;
+    private TicketApi ticketApi;
+    private AutoCompleteTextView from;
+    AutoCompleteTextView to;
 
-    private final int ONE_WAY_DEPARTURE_DATE_PICKER = R.id.btnOneWayDepartureDatePicker;
-    private final int ROUND_DEPARTURE_DATE_PICKER = R.id.btnRoundDepartureDatePicker;
-    private final int ROUND_RETURN_DATE_PICKER = R.id.btnRoundReturnDatePicker;
+    private Button search;
+    private Button btnRoundDepartureDatePicker;
+    private TextView price;
+    private TextView timeGO;
+    private TextView timeOut;
 
-    private DatePickerDialog datePickerDialog1;
-    private DatePickerDialog datePickerDialog2;
-    private DatePickerDialog datePickerDialog3;
-
-    private int year;
-    private int month;
-    private int day;
-
-    private int tempYear;
-    private int tempMonth;
-    private int tempDay;
-
-    private String oneWayDepartureDate, roundDepartureDate, roundReturnDate;
-
-    private Button btnOneWayDepartureDatePicker;
-    private Button btnOneWayClass;
-    private Button btnOneWayNumTraveller;
-
-
-    private View rootView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view =  inflater.inflate(R.layout.fragment_book, container, false);
 
+        from = view.findViewById(R.id.txtRoundFrom);
+        to = view.findViewById(R.id.txtRoundTo);
 
-        rootView = inflater.inflate(R.layout.fragment_book, container, false);
+        search = view.findViewById(R.id.btnSearch);
+        btnRoundDepartureDatePicker = view.findViewById(R.id.btnRoundDepartureDatePicker);
 
-        btnOneWayDepartureDatePicker = (Button) rootView.findViewById(R.id.btnOneWayDepartureDatePicker);
-        btnOneWayDepartureDatePicker.setOnClickListener(this);
-
-        btnOneWayClass = (Button) rootView.findViewById(R.id.btnOneWayClass);
-        btnOneWayNumTraveller = (Button) rootView.findViewById(R.id.btnOneWayNumTraveller);
-
-        countriesSpinnerFrom = (Spinner)rootView.findViewById(R.id.spinner_items_from);
-        countriesSpinnerTo = (Spinner)rootView.findViewById(R.id.spinner_items_to);
-        countriesSpinnerFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                String selectedItem = parent.getItemAtPosition(position).toString();
-                int selected_id = parent.getSelectedItemPosition()+1;
-
-                Toast.makeText(getActivity(), selectedItem, Toast.LENGTH_SHORT).show();
-            }
-
+        btnRoundDepartureDatePicker.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+            public void onClick(View v) {
+                System.out.println("djfvnfjjj");
+               DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(getFragmentManager(), "date picker");
             }
         });
 
-        countriesSpinnerTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-                int selected_id = parent.getSelectedItemPosition()+1;
-                Toast.makeText(getActivity(), selected_id+"", Toast.LENGTH_SHORT).show();
-            }
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-
-
-
-
-        return inflater.inflate(R.layout.fragment_book, container, false);
-
-
-    }
-
-
-
-
-    public DatePickerDialog datePickerDialog(int datePickerId) {
-
-        year = HelperUtilities.currentYear();
-        month = HelperUtilities.currentMonth();
-        day = HelperUtilities.currentDay();
-
-        switch (datePickerId) {
-            case ONE_WAY_DEPARTURE_DATE_PICKER:
-                System.out.println("ffbbb");
-
-                if (datePickerDialog1 == null) {
-                    datePickerDialog1 = new DatePickerDialog(getContext(), getOneWayDepartureDatePickerListener(), year, month, day);
-                }
-                datePickerDialog1.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                return datePickerDialog1;
-
-//            case ROUND_DEPARTURE_DATE_PICKER:
-//
-//                if (datePickerDialog2 == null) {
-//                    datePickerDialog2 = new DatePickerDialog(getContext(), getRoundDepartureDatePickerListener(), year, month, day);
-//                }
-//                datePickerDialog2.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-//                return datePickerDialog2;
-//
-//            case ROUND_RETURN_DATE_PICKER:
-//
-//                if (datePickerDialog3 == null) {
-//                    datePickerDialog3 = new DatePickerDialog(getContext(), getRoundReturnDatePickerListener(), year, month, day);
-//                }
-//                datePickerDialog3.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-//                return datePickerDialog3;
-        }
-        return null;
-    }
-
-    public DatePickerDialog.OnDateSetListener getOneWayDepartureDatePickerListener() {
-        return new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int startYear, int startMonth, int startDay) {
-
-                //get one way departure date here
-
-                oneWayDepartureDate = startYear + "-" + (startMonth + 1) + "-" + startDay;
-                btnOneWayDepartureDatePicker.setText(HelperUtilities.formatDate(startYear, startMonth, startDay));
-
-            }
-        };
-    }
-
-
-
-//    public DatePickerDialog.OnDateSetListener getRoundReturnDatePickerListener() {
-//        return new DatePickerDialog.OnDateSetListener() {
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(30, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+//                .addInterceptor(new Interceptor() {
 //            @Override
-//            public void onDateSet(DatePicker datePicker, int startYear, int startMonth, int startDay) {
+//            public okhttp3.Response intercept(Chain chain) throws IOException {
+//                Request originalRequest = chain.request();
 //
-//                String departureDate = tempYear + "-" + (tempMonth + 1) + "-" + tempDay;
-//                String returnDate = startYear + "-" + (startMonth + 1) + "-" + startDay;
+//                Request newRequest = originalRequest.newBuilder()
+//                        .header("Interceptor-Header", "xyz")
+//                        .build();
 //
-//                if (HelperUtilities.compareDate(departureDate, returnDate)) {
-//                    datePickerAlert().show();
-//                    isValidRoundDate = false;
-//                } else {
-//                    isValidRoundDate = true;
-//                    //get round trip return date here
-//                    roundReturnDate = startYear + "-" + (startMonth + 1) + "-" + startDay;
-//                    btnRoundReturnDatePicker.setText(HelperUtilities.formatDate(startYear, startMonth, startDay));
-//                }
+//                return chain.proceed(newRequest);
 //            }
-//        };
-//    }
+//        })
+//                .addInterceptor(loggingInterceptor)
+//                .build();
 
-    public Dialog datePickerAlert() {
-        return new AlertDialog.Builder(getContext())
-                .setMessage("Please select a valid return date. The return date cannot be before the departure date.")
-                .setCancelable(false)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                }).create();
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://10.0.2.2:3001/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
+                .build();
+
+        ticketApi = retrofit.create(TicketApi.class);
+
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchticket();
+                createPost(from.toString(),to.toString());
+            }
+        });
+        return  view;
     }
 
-    public Dialog datePickerOneAlert() {
-        return new AlertDialog.Builder(getContext())
-                .setMessage("Please select a departure date.")
-                .setCancelable(false)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                }).create();
+
+
+
+    private void createPost(String from,String to) {
+        //Post post = new Post(23, "New Title", "New Text");
+        Map<String, String> fields = new HashMap<>();
+        fields.put("to", from);
+        fields.put("from", to);
+
+        Call<Ticket> call = ticketApi.createPost(fields);
+
+        call.enqueue(new Callback<Ticket>() {
+            @Override
+            public void onResponse(Call<Ticket> call, Response<Ticket> response) {
+
+                if (!response.isSuccessful()) {
+                    price.setText("Code: " + response.code());
+                    return;
+                }
+
+                Ticket postResponse = response.body();
+                String code = "";
+                code += "Code: " + response.code() + "\n";
+                price.setText(code);
+
+                String pricetext = "";
+                pricetext += "price: " + postResponse.getPrice() + "\n";
+                price.setText(pricetext);
+
+                String timego = "";
+                timego += "Time GO: " + postResponse.getTimeGo() + "\n";
+                timeGO.setText(timego);
+
+
+                String timeout = "";
+                timeout += "Time Out: " + postResponse.getTimeOut() + "\n";
+                timeOut.setText(timeout);
+            }
+            @Override
+            public void onFailure(Call<Ticket> call, Throwable t) {
+                //textViewResult.setText(t.getMessage());
+                System.out.println("?????????????!?!?!? " + "Error" );
+            }
+        });
     }
 
-    public Dialog datePickerTwoAlert() {
-        return new AlertDialog.Builder(getContext())
-                .setMessage("Please select a return date.")
-                .setCancelable(false)
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                    }
-                }).create();
+
+    private void searchticket(){
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.search);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        price = dialog.findViewById(R.id.price);
+        timeGO = dialog.findViewById(R.id.timeGo);
+        timeOut = dialog.findViewById(R.id.timeOut);
+
+        Button yes = dialog.findViewById(R.id.yes_button);
+        Button no = dialog.findViewById(R.id.no_button);
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnOneWayDepartureDatePicker:
-                datePickerDialog(ONE_WAY_DEPARTURE_DATE_PICKER).show();
-                break;
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, year);
+        c.set(Calendar.MONTH, month);
+        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+        String currentDateString = DateFormat.getDateInstance(DateFormat.FULL).format(c.getTime());
 
-        }
+
+
 
     }
 }
