@@ -254,7 +254,7 @@
                                 android:drawableLeft="@drawable/ic_person_black_24dp"
                                 android:drawablePadding="15dp"
                                 android:textColor="@color/colorMediumGray"
-                                android:text="1 Traveller"
+                                android:text="1 Пассажир"
                                 android:background="@drawable/bgrounded"
                                 android:layout_marginBottom="10dp"
                                 android:padding="15dp"
@@ -268,18 +268,29 @@
                                 android:layout_height="wrap_content"
                                 android:drawableLeft="@drawable/ic_airline_seat_recline_extra_black_24dp"
                                 android:drawablePadding="15dp"
+                                android:layout_marginBottom="10dp"
                                 android:textAlignment="textStart"
                                 android:layout_gravity="start"
-                                android:text="Economy"
+                                android:text="Эконом класс"
                                 android:background="@drawable/bgrounded"
                                 android:textColor="@color/colorMediumGray"
-                                android:layout_marginBottom="10dp"
                                 android:padding="15dp"
                                 android:textSize="18sp"
                                 android:textAllCaps="false"
                                 android:fontFamily="sans-serif"/>
 
 
+                            <Button
+                                android:id="@+id/btnSearch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/primaryBlue"
+                                android:textColor="@color/colorInverted"
+                                android:text="Поиск рейсы"
+                                android:textSize="18sp"
+                                android:textAllCaps="false"
+                                android:fontFamily="sans-serif"/>
 
 
                         </LinearLayout>
@@ -296,17 +307,7 @@
 
 
 
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/primaryBlue"
-            android:textColor="@color/colorInverted"
-            android:text="Search"
-            android:textSize="18sp"
-            android:textAllCaps="false"
-            android:fontFamily="sans-serif"/>
+
 
     </RelativeLayout>
 
