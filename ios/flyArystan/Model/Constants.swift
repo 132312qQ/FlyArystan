@@ -9,6 +9,7 @@
 import Foundation
 
 let BASE_URL = "http://localhost"
-let LIST_URL = ":3000/price"
+let LIST_URL = ":3001/price"
+let BUY = ":3000/buy"
 
 

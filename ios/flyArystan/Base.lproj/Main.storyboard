@@ -123,7 +123,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="896"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-T5-Edm">
-                                                <rect key="frame" x="20" y="118" width="320" height="782"/>
+                                                <rect key="frame" x="20" y="118" width="320" height="822"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZQd-LO-tZx">
                                                         <rect key="frame" x="0.0" y="0.0" width="320" height="19"/>
@@ -206,8 +206,14 @@
                                                             <constraint firstAttribute="height" constant="50" id="laB-o9-123"/>
                                                         </constraints>
                                                     </pickerView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер удостоверения" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yan-Ts-wRc">
+                                                        <rect key="frame" x="74" y="431" width="172.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер паспорта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvL-qv-ZnC">
-                                                        <rect key="frame" x="0.0" y="431" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="471" width="320" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="wHU-gP-vsP"/>
                                                         </constraints>
@@ -216,7 +222,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Срок истечения пасспорта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWn-er-igD">
-                                                        <rect key="frame" x="0.0" y="471" width="320" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="511" width="320" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.5" id="ry7-KR-dSw"/>
                                                         </constraints>
@@ -225,7 +231,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="md2-hx-gH8">
-                                                        <rect key="frame" x="0.0" y="501.5" width="320" height="50"/>
+                                                        <rect key="frame" x="0.0" y="541.5" width="320" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="JrB-Cs-rYP"/>
                                                         </constraints>
@@ -234,13 +240,13 @@
                                                         </date>
                                                     </datePicker>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Эл. почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fH-IA-7m8">
-                                                        <rect key="frame" x="0.0" y="561.5" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="601.5" width="320" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jS-uz-fMF">
-                                                        <rect key="frame" x="0.0" y="601.5" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="641.5" width="320" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="uJ9-B4-975"/>
                                                         </constraints>
@@ -249,7 +255,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNV-XF-59L">
-                                                        <rect key="frame" x="0.0" y="641.5" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="681.5" width="320" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Ipq-3O-RXP"/>
                                                         </constraints>
@@ -258,7 +264,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль снова" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ofz-8P-IDf">
-                                                        <rect key="frame" x="0.0" y="681.5" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="721.5" width="320" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="a0O-MZ-1dJ"/>
                                                         </constraints>
@@ -267,7 +273,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3z3-SA-0Px">
-                                                        <rect key="frame" x="0.0" y="721.5" width="320" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="761.5" width="320" height="20.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Я ознакомлен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDb-Ka-Q8Y">
                                                                 <rect key="frame" x="0.0" y="0.0" width="251" height="20.5"/>
@@ -284,7 +290,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6XV-DX-kGZ">
-                                                        <rect key="frame" x="0.0" y="752" width="320" height="30"/>
+                                                        <rect key="frame" x="0.0" y="792" width="320" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="LJa-Fs-rgW"/>
                                                         </constraints>
@@ -374,6 +380,7 @@
                         <outlet property="issuePicker" destination="md2-hx-gH8" id="CE8-bG-gbh"/>
                         <outlet property="langPicker" destination="18o-3y-Dh1" id="jdX-gf-7ac"/>
                         <outlet property="name" destination="ZQd-LO-tZx" id="zAs-mt-GmS"/>
+                        <outlet property="national_id" destination="yan-Ts-wRc" id="gFM-wI-pXY"/>
                         <outlet property="password" destination="WNV-XF-59L" id="vbt-0F-PBn"/>
                         <outlet property="statusPicker" destination="KUD-aA-eMq" id="kx2-Mg-dOD"/>
                         <outlet property="surName" destination="7BO-G9-pNG" id="EDv-C5-90i"/>
@@ -499,11 +506,230 @@
                         <outlet property="date" destination="32B-8h-DrZ" id="do6-wL-17k"/>
                         <outlet property="from" destination="PxL-8k-eJH" id="fxj-Da-Ukg"/>
                         <outlet property="toWhere" destination="Yga-2i-gVy" id="HhR-1K-P7S"/>
+                        <segue destination="IaI-fX-jzX" kind="show" identifier="segueId1" id="w11-FG-2cL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXD-Ex-z64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3371.0144927536235" y="1731.6964285714284"/>
+        </scene>
+        <!--BuyVC-->
+        <scene sceneID="8qw-Dv-ROQ">
+            <objects>
+                <viewController id="IaI-fX-jzX" customClass="BuyVC" customModule="flyArystan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hdl-bc-U2v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-Fs-aSi">
+                                <rect key="frame" x="0.0" y="50" width="414" height="796"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Hu6-Le-34J">
+                                        <rect key="frame" x="47" y="38" width="320" height="701"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пол" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-1g-bD5">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8X-cr-eI0">
+                                                <rect key="frame" x="0.0" y="27.5" width="320" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BSx-OH-paE"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-U1-bT3">
+                                                <rect key="frame" x="0.0" y="84.5" width="320" height="67"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xsP-SI-Nha">
+                                                <rect key="frame" x="0.0" y="158.5" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyA-EN-g7f">
+                                                <rect key="frame" x="0.0" y="195.5" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-BQ-7eU">
+                                                <rect key="frame" x="0.0" y="223" width="320" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="KVx-VE-b35"/>
+                                                </constraints>
+                                                <date key="date" timeIntervalSinceReferenceDate="584139932.25708795">
+                                                    <!--2019-07-06 21:05:32 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Гражданство" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kh-c5-KCv">
+                                                <rect key="frame" x="0.0" y="280" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ug-rE-ykC">
+                                                <rect key="frame" x="0.0" y="307.5" width="320" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6QX-m6-K99"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тип документа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRi-IM-QDq">
+                                                <rect key="frame" x="0.0" y="364.5" width="320" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIY-nx-u7c">
+                                                <rect key="frame" x="0.0" y="392" width="320" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dSA-MQ-nzb"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер документа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svS-d7-2ib">
+                                                <rect key="frame" x="0.0" y="449" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5oK-gQ-8Zr">
+                                                <rect key="frame" x="0.0" y="486" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Эл. почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKl-Cm-h9f">
+                                                <rect key="frame" x="0.0" y="523" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя на карте" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2FF-97-bwa">
+                                                <rect key="frame" x="0.0" y="560" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="номер карты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-wV-P2u">
+                                                <rect key="frame" x="0.0" y="597" width="320" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="A9c-c1-6a7">
+                                                <rect key="frame" x="0.0" y="634" width="320" height="30"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="месяц" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EpR-cQ-8sl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="год" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XuD-4s-WiB">
+                                                        <rect key="frame" x="219" y="0.0" width="44" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cvv" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-TG-DYD">
+                                                        <rect key="frame" x="276" y="0.0" width="44" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-1t-LP8">
+                                                <rect key="frame" x="0.0" y="671" width="320" height="30"/>
+                                                <state key="normal" title="Купить">
+                                                    <color key="titleColor" red="1" green="0.99018330880000005" blue="0.9953804637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buyTapped:" destination="IaI-fX-jzX" eventType="touchUpInside" id="UXH-u3-Nnx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="IyA-EN-g7f" secondAttribute="trailing" id="2hu-W8-csH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="gwm-wV-P2u" secondAttribute="trailing" id="5xG-M7-DH1"/>
+                                            <constraint firstItem="mvR-U1-bT3" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="6Uv-ea-ciV"/>
+                                            <constraint firstItem="9ug-rE-ykC" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="7aX-KF-0C5"/>
+                                            <constraint firstItem="q8X-cr-eI0" firstAttribute="trailing" secondItem="Hu6-Le-34J" secondAttribute="trailingMargin" id="8Jc-QT-XM7"/>
+                                            <constraint firstItem="6MF-1g-bD5" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="8sY-7I-9iW"/>
+                                            <constraint firstItem="RfU-BQ-7eU" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="9bb-zA-Sht"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="svS-d7-2ib" secondAttribute="trailing" id="EjX-8m-Ger"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6MF-1g-bD5" secondAttribute="trailing" id="FWq-LV-l1z"/>
+                                            <constraint firstItem="9ug-rE-ykC" firstAttribute="trailing" secondItem="Hu6-Le-34J" secondAttribute="trailingMargin" id="H7B-Wd-GBo"/>
+                                            <constraint firstAttribute="height" constant="701" id="MgU-RG-WLq"/>
+                                            <constraint firstItem="2FF-97-bwa" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="N41-dH-cVg"/>
+                                            <constraint firstItem="IyA-EN-g7f" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="NUg-ka-djj"/>
+                                            <constraint firstItem="A9c-c1-6a7" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="ReV-62-59E"/>
+                                            <constraint firstItem="ZIY-nx-u7c" firstAttribute="trailing" secondItem="Hu6-Le-34J" secondAttribute="trailingMargin" id="Rsm-0F-pbT"/>
+                                            <constraint firstItem="SKl-Cm-h9f" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="U6s-fv-iEq"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xsP-SI-Nha" secondAttribute="trailing" id="WB1-US-8PH"/>
+                                            <constraint firstItem="LRi-IM-QDq" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="Zwp-SP-Qbc"/>
+                                            <constraint firstItem="svS-d7-2ib" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="ckJ-nG-YjZ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="wnT-1t-LP8" secondAttribute="trailing" id="dbe-Ws-WjD"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="A9c-c1-6a7" secondAttribute="trailing" id="ebz-CE-iOo"/>
+                                            <constraint firstItem="RfU-BQ-7eU" firstAttribute="trailing" secondItem="Hu6-Le-34J" secondAttribute="trailingMargin" id="f08-WB-bsx"/>
+                                            <constraint firstItem="xsP-SI-Nha" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="flj-QW-4VJ"/>
+                                            <constraint firstItem="5oK-gQ-8Zr" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="fna-2v-umy"/>
+                                            <constraint firstItem="q8X-cr-eI0" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="j4h-gJ-cuU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="1kh-c5-KCv" secondAttribute="trailing" id="jSZ-9o-ad3"/>
+                                            <constraint firstItem="ZIY-nx-u7c" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="jZH-il-x5k"/>
+                                            <constraint firstItem="1kh-c5-KCv" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="nSN-ze-qXA"/>
+                                            <constraint firstItem="gwm-wV-P2u" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="oSj-f6-T1o"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="LRi-IM-QDq" secondAttribute="trailing" id="op1-ZR-5rg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="2FF-97-bwa" secondAttribute="trailing" id="vil-1X-vIL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="mvR-U1-bT3" secondAttribute="trailing" id="wXl-iZ-wU1"/>
+                                            <constraint firstItem="wnT-1t-LP8" firstAttribute="leading" secondItem="Hu6-Le-34J" secondAttribute="leadingMargin" id="woD-fk-vkF"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="SKl-Cm-h9f" secondAttribute="trailing" id="xW4-I1-hV8"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="5oK-gQ-8Zr" secondAttribute="trailing" id="xoi-Wr-t2e"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hu6-Le-34J" firstAttribute="top" secondItem="bdy-Fs-aSi" secondAttribute="top" constant="38" id="doN-jr-fVq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hu6-Le-34J" secondAttribute="bottom" constant="2" id="pbd-Dw-IAq"/>
+                                    <constraint firstItem="Hu6-Le-34J" firstAttribute="centerX" secondItem="bdy-Fs-aSi" secondAttribute="centerX" id="vSD-YZ-M20"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hu6-Le-34J" secondAttribute="trailing" constant="20" id="ywH-IB-aMO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42766486879999999" green="0.74901962280000001" blue="0.69434668040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bdy-Fs-aSi" firstAttribute="centerX" secondItem="Hdl-bc-U2v" secondAttribute="centerX" id="4yN-yY-nhD"/>
+                            <constraint firstItem="bdy-Fs-aSi" firstAttribute="top" secondItem="Hdl-bc-U2v" secondAttribute="top" constant="50" id="G1o-Rj-Hxh"/>
+                            <constraint firstItem="bdy-Fs-aSi" firstAttribute="leading" secondItem="Hdl-bc-U2v" secondAttribute="leading" id="LWx-eH-vJH"/>
+                            <constraint firstItem="bdy-Fs-aSi" firstAttribute="centerY" secondItem="Hdl-bc-U2v" secondAttribute="centerY" id="WcK-p7-q42"/>
+                            <constraint firstItem="ijc-4K-TME" firstAttribute="trailing" secondItem="bdy-Fs-aSi" secondAttribute="trailing" id="ov0-al-VKS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ijc-4K-TME"/>
+                    </view>
+                    <connections>
+                        <outlet property="birthPicker" destination="RfU-BQ-7eU" id="2N4-SY-U5D"/>
+                        <outlet property="cardmonthField" destination="EpR-cQ-8sl" id="YJh-xz-JbB"/>
+                        <outlet property="cardnumField" destination="gwm-wV-P2u" id="tu8-J2-Atw"/>
+                        <outlet property="carduserField" destination="2FF-97-bwa" id="cT2-YP-dDm"/>
+                        <outlet property="cardyearField" destination="XuD-4s-WiB" id="9ja-jw-GxP"/>
+                        <outlet property="cvvField" destination="0Oe-TG-DYD" id="GLq-V7-kpv"/>
+                        <outlet property="docnumberField" destination="svS-d7-2ib" id="hTF-YN-EET"/>
+                        <outlet property="doctypePicker" destination="ZIY-nx-u7c" id="0dQ-Bg-rZG"/>
+                        <outlet property="emailField" destination="SKl-Cm-h9f" id="Ptb-A6-F2o"/>
+                        <outlet property="genderPicker" destination="q8X-cr-eI0" id="LM4-FJ-4Sw"/>
+                        <outlet property="nameField" destination="mvR-U1-bT3" id="9nd-cq-0d3"/>
+                        <outlet property="nationPicker" destination="9ug-rE-ykC" id="Kcv-HR-x1y"/>
+                        <outlet property="surnameField" destination="xsP-SI-Nha" id="Pvu-Ti-VSz"/>
+                        <outlet property="telField" destination="5oK-gQ-8Zr" id="5Tu-et-vUL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUP-DQ-k2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3372.4637681159425" y="2415.4017857142858"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="okW-fV-j1T">

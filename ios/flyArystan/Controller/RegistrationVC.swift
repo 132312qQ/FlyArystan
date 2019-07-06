@@ -20,12 +20,14 @@ struct rStruct: Codable {
     var mobile: String
     var password1: String
     var password2: String
+    var national_id: String
 }
 
 class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var statusPicker: UIPickerView!
     @IBOutlet weak var langPicker: UIPickerView!
     @IBOutlet weak var countryPicker: UIPickerView!
+    @IBOutlet weak var national_id: UITextField!
     
     @IBOutlet weak var name: UITextField!
     
@@ -92,7 +94,8 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
             let email = email.text,
             let telNumber = telNumber.text,
             let password1 = password.text,
-            let password2 = confirmPassword.text else {
+            let password2 = confirmPassword.text,
+            let national_id = national_id.text else {
                 print("Some field are wrong")
                 return
         }
@@ -113,7 +116,8 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                                   mail: email,
                                   mobile: telNumber,
                                   password1: password1,
-                                  password2: password2)
+                                  password2: password2,
+                                  national_id: national_id)
             do {
                 let jsonData = try JSONEncoder().encode(struct1)
                 var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(LIST_URL)")!) // Configure in a right way
