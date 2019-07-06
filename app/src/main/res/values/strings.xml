@@ -34,4 +34,30 @@
         <item>Fare</item>
         <item>Travel time</item>
     </string-array>
+
+        <string-array name="spinner_status">
+            <item>Г-н</item>
+            <item>Г-жа</item>
+        </string-array>
+
+
+    <string-array name="spinner_month">
+        <item>Января</item>
+        <item>Февраля</item>
+        <item>Марта</item>
+        <item>Апреля</item>
+        <item>Мая</item>
+        <item>Июня</item>
+        <item>Июля</item>
+        <item>Августа</item>
+        <item>Сентября</item>
+        <item>Октября</item>
+        <item>Января</item>
+        <item>Ноября</item>
+        <item>Декабря</item>
+        
+    </string-array>
+
+
+
 </resources>

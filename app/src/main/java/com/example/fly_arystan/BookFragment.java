@@ -1,6 +1,7 @@
 package com.example.fly_arystan;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -158,6 +159,41 @@ public class BookFragment extends Fragment{
 
         Button yes = dialog.findViewById(R.id.yes_button);
         Button no = dialog.findViewById(R.id.no_button);
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityTwo.class);
+                startActivity(intent);
+                //buyticket();
+            }
+        });
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+    }
+
+
+
+
+
+
+    private void buyticket(){
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.buy);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        price = dialog.findViewById(R.id.price);
+        timeGO = dialog.findViewById(R.id.timeGo);
+        timeOut = dialog.findViewById(R.id.timeOut);
+
+        Button yes = dialog.findViewById(R.id.yes_button);
+        Button no = dialog.findViewById(R.id.no_button);
+
+
 
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
