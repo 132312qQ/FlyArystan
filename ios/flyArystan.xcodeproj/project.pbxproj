@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B72FD0622D0F63700A73D22 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */; };
+		1B72FD0A22D1200900A73D22 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72FD0922D1200900A73D22 /* SearchVC.swift */; };
 		1B84E8FC22D09B9200CA098C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84E8FB22D09B9200CA098C /* AppDelegate.swift */; };
 		1B84E90122D09B9200CA098C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B84E8FF22D09B9200CA098C /* Main.storyboard */; };
 		1B84E90322D09B9300CA098C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84E90222D09B9300CA098C /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		1B72FD0922D1200900A73D22 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		1B84E8F822D09B9200CA098C /* flyArystan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flyArystan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B84E8FB22D09B9200CA098C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B84E90022D09B9200CA098C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */,
+				1B72FD0922D1200900A73D22 /* SearchVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B72FD0A22D1200900A73D22 /* SearchVC.swift in Sources */,
 				1B84E8FC22D09B9200CA098C /* AppDelegate.swift in Sources */,
 				1B72FD0622D0F63700A73D22 /* RegistrationVC.swift in Sources */,
 				1B84E91222D09CAF00CA098C /* Constants.swift in Sources */,

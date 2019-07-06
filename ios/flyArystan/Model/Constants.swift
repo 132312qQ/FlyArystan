@@ -8,7 +8,7 @@
 
 import Foundation
 
-let BASE_URL = "https://booking.flyarystan.com/"
-let LIST_URL = "web/Availability.xhtml?faces-redirect=true"
+let BASE_URL = "http://localhost"
+let LIST_URL = ":3000/price"
 
 

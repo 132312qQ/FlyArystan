@@ -9,16 +9,17 @@
 import UIKit
 struct rStruct: Codable {
     var name: String
-    var surName: String
+    var surname: String
     var status: String
     var lang: String
-    var date: String
+    var birth: String
     var country: String
-    var idPassport: String
-    var issueDate: String
-    var email: String
-    var telNumber: String
-    var password: String
+    var passport: String
+    var expireDate: String
+    var mail: String
+    var mobile: String
+    var password1: String
+    var password2: String
 }
 
 class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
@@ -30,11 +31,11 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBOutlet weak var birthDatePicker: UIDatePicker!
     
+    @IBOutlet weak var issuePicker: UIDatePicker!
     @IBOutlet weak var confirmPassword: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var telNumber: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var issueDate: UITextField!
     @IBOutlet weak var idPassport: UITextField!
     @IBOutlet weak var surName: UITextField!
     var statuses = ["Господин", "Госпожа"]
@@ -49,6 +50,8 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         statusPicker.dataSource = self
         langPicker.dataSource = self
         countryPicker.dataSource = self
+        print("LOOOK")
+        print(statusPicker.selectedRow(inComponent: 0))
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -86,7 +89,6 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         guard let name = name.text,
             let surName = surName.text,
            let idPassport = idPassport.text,
-            let issueDate = issueDate.text,
             let email = email.text,
             let telNumber = telNumber.text,
             let password1 = password.text,
@@ -95,21 +97,23 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                 return
         }
             
-        if password1 == password2 {
+       
             let fmt = DateFormatter()
             fmt.dateFormat = "dd/MM/yyyy"
-            let str = fmt.string(from: birthDatePicker.date)
+            let birth = fmt.string(from: birthDatePicker.date)
+            let issue = fmt.string(from: issuePicker.date)
             let struct1 = rStruct(name: name,
-                                  surName: surName,
-                                  status: statuses[statusPicker.selectedRow(inComponent: 1)],
-                                  lang: langs[langPicker.selectedRow(inComponent: 1)],
-                                  date: str,
-                                  country: contries[countryPicker.selectedRow(inComponent: 1)],
-                                  idPassport: idPassport,
-                                  issueDate: issueDate,
-                                  email: email,
-                                  telNumber: telNumber,
-                                  password: password1)
+                                  surname: surName,
+                                  status: statuses[statusPicker.selectedRow(inComponent: 0)],
+                                  lang: langs[langPicker.selectedRow(inComponent: 0)],
+                                  birth: birth,
+                                  country: contries[countryPicker.selectedRow(inComponent: 0)],
+                                  passport: idPassport,
+                                  expireDate: issue,
+                                  mail: email,
+                                  mobile: telNumber,
+                                  password1: password1,
+                                  password2: password2)
             do {
                 let jsonData = try JSONEncoder().encode(struct1)
                 var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(LIST_URL)")!) // Configure in a right way
@@ -134,12 +138,13 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                     }
                     
                 }
-                task.resume()
+                //task.resume()
+                print(struct1.birth)
             } catch {
                 print(error.localizedDescription)
             }
 
-        }
+        
     }
     
     
