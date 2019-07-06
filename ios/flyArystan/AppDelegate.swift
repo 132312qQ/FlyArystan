@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
-        task.resume()
+        //task.resume()
         
         
         
