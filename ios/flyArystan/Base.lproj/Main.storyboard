@@ -10,17 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Online RegisterVC-->
         <scene sceneID="Lfa-bS-bfC">
             <objects>
-                <viewController id="hgz-CZ-k35" sceneMemberID="viewController">
+                <viewController id="hgz-CZ-k35" customClass="OnlineRegisterVC" customModule="flyArystan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8q-hT-Faq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="mpM-c3-9m8">
+                                <rect key="frame" x="10" y="108" width="394" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjO-w0-n4P">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Booking number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r53-X7-nNY">
+                                        <rect key="frame" x="0.0" y="55" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0i7-DW-a80">
+                                        <rect key="frame" x="0.0" y="104" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k0t-XV-7nd">
+                                        <rect key="frame" x="0.0" y="153" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RII-Qd-CvW">
+                                        <rect key="frame" x="0.0" y="202" width="394" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="hgz-CZ-k35" eventType="touchUpInside" id="DnC-Yv-dre"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.98464212839999998" blue="0.57056317280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mpM-c3-9m8" firstAttribute="leading" secondItem="Ahh-BM-naB" secondAttribute="leading" constant="10" id="AvD-18-qd6"/>
+                            <constraint firstItem="mpM-c3-9m8" firstAttribute="top" secondItem="Ahh-BM-naB" secondAttribute="top" constant="20" id="SEw-5e-RrH"/>
+                            <constraint firstItem="Ahh-BM-naB" firstAttribute="trailing" secondItem="mpM-c3-9m8" secondAttribute="trailing" constant="10" id="sLR-Wv-iap"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ahh-BM-naB"/>
                     </view>
                     <navigationItem key="navigationItem" id="h4h-Q8-vX9"/>
+                    <connections>
+                        <outlet property="nameF" destination="0i7-DW-a80" id="D0V-Ml-dsO"/>
+                        <outlet property="numberF" destination="r53-X7-nNY" id="Pxn-ar-B98"/>
+                        <outlet property="surnameF" destination="k0t-XV-7nd" id="vgX-pP-AVk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gJ-T3-hB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -604,7 +653,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="32B-8h-DrZ">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="32B-8h-DrZ">
                                         <rect key="frame" x="0.0" y="148" width="374" height="216"/>
                                         <date key="date" timeIntervalSinceReferenceDate="584130403.36255896">
                                             <!--2019-07-06 18:26:43 +0000-->

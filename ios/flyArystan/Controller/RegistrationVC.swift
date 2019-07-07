@@ -130,10 +130,15 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                 
                 let task = URLSession.shared.uploadTask(with: urlRequest, from: jsonData){ (data, response, error) in
                     let data1 = try! JSONDecoder().decode(fStruct.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Status", message: "Status: \(data1.status)", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
                         
-                        if data1.status == "success"{
-                            self.performSegue(withIdentifier: "segueId2", sender: nil)
-                        }
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        
+                    }
                     
                     
                 }
