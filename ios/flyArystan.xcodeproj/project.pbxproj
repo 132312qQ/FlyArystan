@@ -20,6 +20,7 @@
 		1B84E90322D09B9300CA098C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84E90222D09B9300CA098C /* Assets.xcassets */; };
 		1B84E90622D09B9300CA098C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B84E90422D09B9300CA098C /* LaunchScreen.storyboard */; };
 		1B84E91222D09CAF00CA098C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84E91122D09CAF00CA098C /* Constants.swift */; };
+		1BB720A422D1B86500DFE673 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB720A322D1B86500DFE673 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1B84E90522D09B9300CA098C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B84E90722D09B9300CA098C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B84E91122D09CAF00CA098C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BB720A322D1B86500DFE673 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				1B72FD1922D1976D00A73D22 /* HelpVC.swift */,
 				1B72FD1B22D19DDC00A73D22 /* LoginVC.swift */,
 				1B72FD1D22D1A6C500A73D22 /* OnlineRegisterVC.swift */,
+				1BB720A322D1B86500DFE673 /* InfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B72FD1422D1425E00A73D22 /* BuyVC.swift in Sources */,
+				1BB720A422D1B86500DFE673 /* InfoViewController.swift in Sources */,
 				1B72FD1A22D1976D00A73D22 /* HelpVC.swift in Sources */,
 				1B72FD0A22D1200900A73D22 /* SearchVC.swift in Sources */,
 				1B72FD1822D18E5600A73D22 /* CheckVC.swift in Sources */,

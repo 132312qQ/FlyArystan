@@ -17,28 +17,48 @@ struct structFromServer: Codable {
     var timeGo: String
     var timeOut: String
 }
-class SearchVC: UIViewController {
+class SearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var from: UITextField!
-    @IBOutlet weak var toWhere: UITextField!
+    
+    
+    @IBOutlet weak var from: UIPickerView!
+    @IBOutlet weak var toWhere: UIPickerView!
+    
+    
+    let cities =  ["Алматы", "Павлодар","Уральск","Караганда","Тараз", "Нур-Султан", "Шымкент"]
+    
+    
     @IBOutlet weak var date: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
+        from.delegate = self
+        from.dataSource = self
+        
+        toWhere.delegate = self
+        toWhere.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return cities.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return cities[row]
+    }
+    
     
     @IBAction func searchPresses(_ sender: Any) {
-        guard let from = from.text,
-            let toWhere = toWhere.text else {
-                print("Error in constructing the structure for searching")
-                return
-        }
+        
         let fmt = DateFormatter()
         fmt.dateFormat = "dd/MM/yyyy"
         let date1 = fmt.string(from: date.date )
         
-        let struct1 = structFS(from: from, to: toWhere)
+        let struct1 = structFS(from: cities[from.selectedRow(inComponent: 0)],
+                               to: cities[toWhere.selectedRow(inComponent: 0)])
         
         do {
             let jsonData = try JSONEncoder().encode(struct1)

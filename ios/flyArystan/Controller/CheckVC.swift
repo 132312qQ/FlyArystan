@@ -23,12 +23,24 @@ struct FromCheckStatus: Codable {
 }
 class CheckVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-let days = ["yesterday", "today", "tomorrow"]
+    @IBOutlet weak var toWhere: UIPickerView!
+    @IBOutlet weak var from: UIPickerView!
+    
+    let cities2 =  ["Алматы", "Павлодар","Уральск","Караганда","Тараз", "Нур-Султан", "Шымкент"]
+    
+    let days = ["yesterday", "today", "tomorrow"]
+    
     let cities = ["Алматы": "ALA", "Павлодар": "PWQ","Уральск": "URA","Караганда": "KGF","Тараз": "DMB", "Нур-Султан": "TSE", "Шымкент": "CIT"]
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.delegate = self
         datePicker.dataSource = self
+        
+        from.delegate = self
+        from.dataSource = self
+        
+        toWhere.delegate = self
+        toWhere.dataSource = self
         // Do any additional setup after loading the view.
         
     }
@@ -36,24 +48,36 @@ let days = ["yesterday", "today", "tomorrow"]
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return days.count
+        switch pickerView.tag {
+        case 1:
+            return cities2.count
+        case 2:
+            return days.count
+        default:
+            return 0
+        }
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return days[row]
+        
+        switch pickerView.tag {
+        case 1:
+            return cities2[row]
+        case 2:
+            return days[row]
+        default:
+            return ""
+        }
     }
     @IBOutlet weak var datePicker: UIPickerView!
     
-    @IBOutlet weak var fromField: UITextField!
     
-    @IBOutlet weak var toField: UITextField!
     
      @IBAction func checkTapped(_ sender: Any) {
-        guard let from = fromField.text,
-            let to = toField.text else {
-                return
-        }
+        let from = cities[cities2[self.from.selectedRow(inComponent: 0)]]
+            let to = cities[cities2[self.toWhere.selectedRow(inComponent: 0)]]
         let day = days[datePicker.selectedRow(inComponent: 0)]
-        let struct1 = structForCheckStatus(from: cities[from]!, to: cities[to]!, day: day)
+        let struct1 = structForCheckStatus(from: from!, to: to!, day: day)
         do {
             let jsonData = try JSONEncoder().encode(struct1)
             var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(STATUS)")!) // Configure in a right way
