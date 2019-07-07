@@ -52,12 +52,12 @@ public class BookFragment extends Fragment implements DatePickerDialog.OnDateSet
 
     private Button search;
     private Button btnRoundDepartureDatePicker;
+
     private TextView price;
     private TextView timeGO;
     private TextView timeOut;
+    private TextView departure_date;
 
-    private String frromSelected = "";
-    private String toSelected = "";
 
     @Nullable
     @Override
@@ -67,6 +67,7 @@ public class BookFragment extends Fragment implements DatePickerDialog.OnDateSet
 
         search = view.findViewById(R.id.btnSearch);
         btnRoundDepartureDatePicker = view.findViewById(R.id.btnRoundDepartureDatePicker);
+
 
         final Spinner spinnerOne = (Spinner) view.findViewById(R.id.spinner_flight_from);
 
@@ -112,6 +113,7 @@ public class BookFragment extends Fragment implements DatePickerDialog.OnDateSet
                 }
                 else
                 {
+
                     return true;
                 }
             }
@@ -201,14 +203,14 @@ public class BookFragment extends Fragment implements DatePickerDialog.OnDateSet
             }
         });
 
-//        btnRoundDepartureDatePicker.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                System.out.println("djfvnfjjj");
-//               DialogFragment datePicker = new DatePickerFragment();
-//                datePicker.show(getFragmentManager(), "date picker");
-//            }
-//        });
+        btnRoundDepartureDatePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("djfvnfjjj");
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getFragmentManager(), "DatePicker");
+            }
+        });
 
         return  view;
     }

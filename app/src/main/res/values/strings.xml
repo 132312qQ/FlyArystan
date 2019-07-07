@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EasyTravel</string>
+    <string name="app_name">FlyArystan</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -31,6 +31,10 @@
     <string name="sname">Фамилия</string>
     <string name="regFlight">Регистрация на рейс</string>
     <string name="checkFlight">Проверить статус</string>
+    <string name="enterName">Имя</string>
+    <string name="enterSurname">Фамилия</string>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
