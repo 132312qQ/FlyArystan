@@ -80,7 +80,7 @@ public class ActivityTwo extends AppCompatActivity {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:7200/")
+                .baseUrl("http://10.0.2.2:100/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

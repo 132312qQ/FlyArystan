@@ -53,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginBottom="10dp">
 
                     <EditText
                         android:id="@+id/name"
@@ -109,7 +109,6 @@
                     android:layout_marginEnd="4dp"
                     android:layout_marginTop="10dp"
                     android:paddingStart="8dp"
-                    android:paddingTop="10dp"
                     android:paddingEnd="8dp"
                     android:paddingBottom="10dp">
                 </Spinner>
@@ -158,26 +157,59 @@
                     android:textAppearance="?android:textAppearanceMedium"
                     tools:targetApi="o" />
 
-                <Button
-                    android:id="@+id/send"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="start"
-                    android:drawablePadding="15dp"
-                    android:text="Отправить"
-                    android:background="@drawable/background_signup"
-                    android:textColor="@color/white"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
                     android:layout_marginTop="20dp"
-                    android:paddingStart="8dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="10dp"
-                    android:textSize="18sp"
-                    android:textAllCaps="false"
-                    android:fontFamily="sans-serif"/>
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:text="Отправить"
+                        android:background="@drawable/background_signup"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"/>
+
+
+                    <Button
+                        android:id="@+id/contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:text="Контакты"
+                        android:background="@drawable/background_signup"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="20dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"/>
+
+                </LinearLayout>
+
 
 
 

@@ -1,5 +1,6 @@
 package com.example.fly_arystan;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -36,6 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TimetableFragment extends Fragment {
     private ContactasApi contactasApi;
     private Button send;
+    private Button contact;
 
     private EditText name;
     private EditText mail;
@@ -53,6 +55,7 @@ public class TimetableFragment extends Fragment {
         message = view.findViewById(R.id.message);
 
         send = view.findViewById(R.id.send);
+        contact = view.findViewById(R.id.contact);
 
         final Spinner spinnerGender = (Spinner) view.findViewById(R.id.spinnerContact);
         final Spinner spinnerLanguage = (Spinner) view.findViewById(R.id.spinnerText);
@@ -74,6 +77,15 @@ public class TimetableFragment extends Fragment {
                 "Получения копии квитанции",
 
         };
+
+
+        contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),Web.class);
+                startActivity(intent);
+            }
+        });
 
 
         final List<String> genderList = new ArrayList<>(Arrays.asList(gender));
@@ -192,7 +204,7 @@ public class TimetableFragment extends Fragment {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:1111/")
+                .baseUrl("http://10.0.2.2:300/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

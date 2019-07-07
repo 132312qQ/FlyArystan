@@ -54,7 +54,7 @@ public class RegistrationFragment extends Fragment {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:10000/")
+                .baseUrl("http://10.0.2.2:500/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

@@ -76,7 +76,7 @@ public class BookFragment extends Fragment{
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:8200/")
+                .baseUrl("http://10.0.2.2:400/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

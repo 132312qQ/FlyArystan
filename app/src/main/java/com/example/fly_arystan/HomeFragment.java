@@ -287,7 +287,7 @@ public class HomeFragment extends Fragment {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:2222/")
+                .baseUrl("http://10.0.2.2:300/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();

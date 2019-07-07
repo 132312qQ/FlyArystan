@@ -22,6 +22,7 @@
 
 
         <activity android:name=".ActivityTwo"></activity>
+        <activity android:name=".Web"></activity>
     </application>
 
 </manifest>
