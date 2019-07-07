@@ -5,10 +5,191 @@
     android:layout_height="match_parent"
     tools:context=".TimetableFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryBlue"
+                android:padding="4dp"
+                android:text="Свяжитесь с нами"
+                android:textColor="@color/accent_color"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="20dp">
+
+                <Spinner
+                    android:id="@+id/spinnerContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp">
+                </Spinner>
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="30dp">
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Имя"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+                    <EditText
+                        android:id="@+id/surname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Почта"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+                </LinearLayout>
+
+                <Spinner
+
+                    android:id="@+id/spinnerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp">
+                </Spinner>
+
+                <EditText
+                    android:id="@+id/telNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="Номер билета"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+                <EditText
+                    android:id="@+id/message"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="Напишите сообщения"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+                <Button
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:drawablePadding="15dp"
+                    android:text="Отправить"
+                    android:background="@drawable/background_signup"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 </FrameLayout>

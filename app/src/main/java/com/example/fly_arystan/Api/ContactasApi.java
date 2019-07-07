@@ -8,6 +8,6 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface ContactasApi {
-    @POST("contact")
+    @POST("contactUs")
     Call<Contact> contact(@Body Contact contact);
 }
