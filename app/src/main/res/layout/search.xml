@@ -6,7 +6,7 @@
     android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/background"
+    android:background="@color/primaryBlue"
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
@@ -25,6 +25,7 @@
             android:hint="Price"
             android:background="@null"
             android:padding="10dp"
+            android:textSize="20dp"
             android:textColor="#fff"
             android:textColorHint="#fff"/>
         <View
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="TimeGO"
+            android:textSize="20dp"
             android:background="@null"
             android:padding="10dp"
             android:textColor="#fff"
@@ -50,27 +52,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="TimeOut"
+            android:textSize="20dp"
             android:background="@null"
             android:padding="10dp"
             android:textColor="#fff"
             android:textColorHint="#fff" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#f9d7db"/>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
-
             <Button
                 android:id="@+id/no_button"
-                android:layout_width="110dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/backdround_login"
                 android:text="cancel"
@@ -78,7 +77,7 @@
                 android:textColor="@color/colorAccent" />
             <Button
                 android:id="@+id/yes_button"
-                android:layout_width="110dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/no"
                 android:background="@drawable/backdround_login"

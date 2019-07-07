@@ -1,14 +1,19 @@
 package com.example.fly_arystan;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.fly_arystan.Api.RegistrationApi;
@@ -16,7 +21,10 @@ import com.example.fly_arystan.Api.TicketApi;
 import com.example.fly_arystan.Model.Ticket;
 import com.example.fly_arystan.Model.UserRegister;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -42,6 +50,9 @@ public class HomeFragment extends Fragment {
     private EditText mobil;
     private EditText passwor1;
     private EditText passwor2;
+    private Button btnBirthDate;
+    private Button btnPasportDate;
+    private String countrytext;
 
 
     @Nullable
@@ -49,19 +60,224 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_home, container, false);
 
-        nam = view.findViewById(R.id.name);
-        surnam = view.findViewById(R.id.surname);
-        birt = view.findViewById(R.id.birth);
-        national = view.findViewById(R.id.national_id);
-        passpor = view.findViewById(R.id.passport);
-        expire_dat = view.findViewById(R.id.expire_date);
-        mai = view.findViewById(R.id.mail);
-        mobil = view.findViewById(R.id.mobile);
-        passwor1 = view.findViewById(R.id.password1);
-        passwor2 = view.findViewById(R.id.password2);
+        nam = view.findViewById(R.id.reg_name);
+        surnam = view.findViewById(R.id.reg_surname);
+        passpor = view.findViewById(R.id.reg_pasportnumber);
+        mai = view.findViewById(R.id.reg_mail);
+        mobil = view.findViewById(R.id.reg_number);
+        passwor1 = view.findViewById(R.id.password);
+        passwor2 = view.findViewById(R.id.checkpassword);
+        register = view.findViewById(R.id.create);
 
 
-        register = view.findViewById(R.id.register);
+        final Spinner spinnerGender = (Spinner) view.findViewById(R.id.spinnerGender);
+        final Spinner spinnerLanguage = (Spinner) view.findViewById(R.id.spinnerLanguage);
+        final Spinner spinnerCountry = (Spinner) view.findViewById(R.id.spinnerCountry);
+
+        btnBirthDate = view.findViewById(R.id.btnBirthDate);
+        btnPasportDate  = view.findViewById(R.id.btnPasportDate);
+
+        btnBirthDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getFragmentManager(), "DatePicker");
+                //System.out.println( ((DatePickerFragment) newFragment).getDate());
+            }
+        });
+
+        btnPasportDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getFragmentManager(), "DatePicker");
+                //System.out.println( ((DatePickerFragment) newFragment).getDate());
+            }
+        });
+
+        String[] gender = new String[]{
+                "Пол",
+                "Г-н",
+                "Г-жа"
+
+        };
+
+        String[] languages = new String[]{
+                "Язык",
+                "Английский",
+                "Русский",
+                "Казахский"
+
+        };
+
+        String[] countries = new String[]{
+                "Страна",
+                "Казахстан"
+        };
+
+        final List<String> genderList = new ArrayList<>(Arrays.asList(gender));
+        final List<String> languagesList= new ArrayList<>(Arrays.asList(languages));
+        final List<String> countriesList= new ArrayList<>(Arrays.asList(countries));
+
+        final ArrayAdapter<String> genderArrayAdapterOne = new ArrayAdapter<String>( getContext(),R.layout.spinner_item, genderList){
+            @Override
+            public boolean isEnabled(int position){
+                if(position == 0)
+                {
+                    // Disable the first item from Spinner
+                    // First item will be use for hint
+                    return false;
+                }
+                else
+                {
+
+                    return true;
+                }
+            }
+            @Override
+            public View getDropDownView(int position, View convertView,
+                                        ViewGroup parent) {
+                View view = super.getDropDownView(position, convertView, parent);
+                TextView tv = (TextView) view;
+                if(position == 0){
+                    // Set the hint text color gray
+                    tv.setTextColor(Color.GRAY);
+                }
+                else {
+                    tv.setTextColor(Color.BLACK);
+                }
+                return view;
+            }
+        };
+        genderArrayAdapterOne.setDropDownViewResource(R.layout.spinner_item);
+        spinnerGender.setAdapter(genderArrayAdapterOne);
+
+        spinnerGender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItemText = (String) parent.getItemAtPosition(position);
+                // If user change the default selection
+                // First item is disable and it is used for hint
+                if(position > 0){
+                    // Notify the selected item text
+                    System.out.println("Selected : " + selectedItemText);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        final ArrayAdapter<String> languagesArrayAdapterOne = new ArrayAdapter<String>( getContext(),R.layout.spinner_item, languagesList){
+            @Override
+            public boolean isEnabled(int position){
+                if(position == 0)
+                {
+                    // Disable the first item from Spinner
+                    // First item will be use for hint
+                    return false;
+                }
+                else
+                {
+
+                    return true;
+                }
+            }
+            @Override
+            public View getDropDownView(int position, View convertView,
+                                        ViewGroup parent) {
+                View view = super.getDropDownView(position, convertView, parent);
+                TextView tv = (TextView) view;
+                if(position == 0){
+                    // Set the hint text color gray
+                    tv.setTextColor(Color.GRAY);
+                }
+                else {
+                    tv.setTextColor(Color.BLACK);
+                }
+                return view;
+            }
+        };
+
+        languagesArrayAdapterOne.setDropDownViewResource(R.layout.spinner_item);
+
+
+        spinnerLanguage.setAdapter(languagesArrayAdapterOne);
+
+        spinnerLanguage.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItemText = (String) parent.getItemAtPosition(position);
+                // If user change the default selection
+                // First item is disable and it is used for hint
+                if(position > 0){
+                    // Notify the selected item text
+                    System.out.println("Selected : " + selectedItemText);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        final ArrayAdapter<String> countriesArrayAdapterOne = new ArrayAdapter<String>( getContext(),R.layout.spinner_item, countriesList){
+            @Override
+            public boolean isEnabled(int position){
+                if(position == 0)
+                {
+                    // Disable the first item from Spinner
+                    // First item will be use for hint
+                    return false;
+                }
+                else
+                {
+
+                    return true;
+                }
+            }
+            @Override
+            public View getDropDownView(int position, View convertView,
+                                        ViewGroup parent) {
+                View view = super.getDropDownView(position, convertView, parent);
+                TextView tv = (TextView) view;
+                if(position == 0){
+                    // Set the hint text color gray
+                    tv.setTextColor(Color.GRAY);
+                }
+                else {
+                    tv.setTextColor(Color.BLACK);
+                }
+                return view;
+            }
+        };
+        countriesArrayAdapterOne.setDropDownViewResource(R.layout.spinner_item);
+        spinnerCountry.setAdapter(countriesArrayAdapterOne);
+
+        spinnerCountry.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItemText = (String) parent.getItemAtPosition(position);
+                // If user change the default selection
+                // First item is disable and it is used for hint
+                if(position > 0){
+                    countrytext = parent.getSelectedItemId() + "";
+                    // Notify the selected item text
+                    System.out.println("Selected : " + selectedItemText);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
 
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -70,25 +286,8 @@ public class HomeFragment extends Fragment {
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
-//                .addInterceptor(new Interceptor() {
-//            @Override
-//            public okhttp3.Response intercept(Chain chain) throws IOException {
-//                Request originalRequest = chain.request();
-//
-//                Request newRequest = originalRequest.newBuilder()
-//                        .header("Interceptor-Header", "xyz")
-//                        .build();
-//
-//                return chain.proceed(newRequest);
-//            }
-//        })
-//                .addInterceptor(loggingInterceptor)
-//                .build();
-
-
-
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:6003/")
+                .baseUrl("http://10.0.2.2:2222/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
@@ -98,30 +297,14 @@ public class HomeFragment extends Fragment {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createPost(nam.getText().toString(),surnam.getText().toString(),birt.getText().toString(),national.getText().toString(),passpor.getText().toString(),expire_dat.getText().toString(),mai.getText().toString(),mobil.getText().toString(),passwor1.getText().toString(),passwor2.getText().toString());
+                createPost(nam.getText().toString(),surnam.getText().toString(),"07/11/1992",countrytext,passpor.getText().toString(),"02/09/2025",mai.getText().toString(),mobil.getText().toString(),passwor1.getText().toString(),passwor2.getText().toString());
             }
         });
         return  view;
 
     }
     private void createPost(String name,String surname,String birth,String national_id,String passport,String expire_date,String mail,String mobile,String password1,String password2) {
-        System.out.println("???????? " +name);
-        Map<String, String> fields = new HashMap<>();
-        fields.put("name", name);
-        fields.put("surname", surname);
-        fields.put("birth", birth);
-        fields.put("national_id", national_id);
-        fields.put("passport", passport);
-        fields.put("expire_date", expire_date);
-        fields.put("mail", mail);
-        fields.put("mobile", mobile);
-        fields.put("password1", password1);
-        fields.put("password2", password2);
-
-        UserRegister userRegister = new UserRegister(name,surname,birth,national_id,passport,expire_date,mail,mobile,password1,password2);
-
-
-        Call<UserRegister> call = registrationApi.createRegistration(userRegister);
+        Call<UserRegister> call = registrationApi.createRegistration(name,surname,birth,national_id,passport,expire_date,mail,mobile,password1,password2);
 
         call.enqueue(new Callback<UserRegister>() {
             @Override
@@ -129,26 +312,9 @@ public class HomeFragment extends Fragment {
 
                 if (!response.isSuccessful()) {
                     nam.setText("Code: " + response.code());
+                    System.out.println("!!!!!!<<><>><<>" + response.code());
                     return;
                 }
-
-//                Ticket postResponse = response.body();
-//                String code = "";
-//                code += "Code: " + response.code() + "\n";
-//                price.setText(code);
-//
-//                String pricetext = "";
-//                pricetext += "price: " + postResponse.getPrice() + "\n";
-//                price.setText(pricetext);
-//
-//                String timego = "";
-//                timego += "Time GO: " + postResponse.getTimeGo() + "\n";
-//                timeGO.setText(timego);
-//
-//
-//                String timeout = "";
-//                timeout += "Time Out: " + postResponse.getTimeOut() + "\n";
-//                timeOut.setText(timeout);
             }
             @Override
             public void onFailure(Call<UserRegister> call, Throwable t) {

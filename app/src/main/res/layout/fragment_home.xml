@@ -6,172 +6,535 @@
     android:clickable="true"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/background_pink"
-            android:padding="8dp"
-            android:text="User Account"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Name"
-                android:inputType="textPersonName"
-                />
-
-            <EditText
-                android:id="@+id/surname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Surname"
-                android:inputType="text"
-                />
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_pink"
-            android:padding="8dp"
-            android:text="User Contact"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp">
-            <EditText
-                android:id="@+id/birth"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Birth"
-                android:inputType="textPersonName"
-                />
-            <EditText
-                android:id="@+id/national_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="National Id"
-                android:inputType="phone"
-                />
-
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_pink"
-            android:padding="10dp"
-            android:text="Dateeeee"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp">
-            <EditText
-                android:id="@+id/passport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Passport"
-                android:inputType="text"
-                />
-            <EditText
-                android:id="@+id/expire_date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Expire Date"
-                android:inputType="text"
-                />
-
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/background_pink"
-            android:padding="10dp"
-            android:text="Verification"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp">
-            <EditText
-                android:id="@+id/mail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Mail"
-                android:inputType="text"
-                />
-            <EditText
-                android:id="@+id/mobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Mobile"
-                android:inputType="text"
-                />
-
-            <EditText
-                android:id="@+id/password1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="text"
-                />
-
-            <EditText
-                android:id="@+id/password2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Confirm Password"
-                android:inputType="text"
-                />
-
-        </LinearLayout>
-
-        <Button
-            android:layout_gravity="bottom"
-            android:id="@+id/register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register Profile"
-            android:theme="@style/ButtonTheme"
+            android:background="@color/primaryBlue"
+            android:padding="4dp"
+            android:text="Персональные данные"
+            android:textColor="@color/accent_color"
             android:textSize="18sp"
+            android:textAlignment="center"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <EditText
+                android:id="@+id/reg_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text"
+                android:drawablePadding="5dp"
+                android:elevation="8dp"
+                android:ems="10"
+                android:hint="@string/enterName"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:stateListAnimator="@null"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/reg_surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text"
+                android:drawablePadding="5dp"
+                android:elevation="8dp"
+                android:ems="10"
+                android:hint="@string/enterSurname"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:stateListAnimator="@null"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:targetApi="o" />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp">
+
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/spinnerLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp">
+                </Spinner>
+
+                <Button
+                    android:id="@+id/btnBirthDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="15dp"
+                    android:text="ДР"
+                    android:background="@drawable/bgrounded"
+                    android:textColor="@color/colorMediumGray"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp">
+
+                </Spinner>
+
+                <EditText
+                    android:id="@+id/reg_pasportnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="Номер паспорта"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPasportDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="15dp"
+                android:text="Срок д/д"
+                android:background="@drawable/bgrounded"
+                android:textColor="@color/colorMediumGray"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:paddingStart="8dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="10dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"/>
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/background_signup"
-            android:textColor="#fff"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryBlue"
+                android:padding="4dp"
+                android:text="Контактная информация"
+                android:textColor="@color/accent_color"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/reg_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Электронная почта"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+
+                    <Button
+                        android:id="@+id/addEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                        android:drawablePadding="15dp"
+                        android:text="Добавить"
+                        android:background="@drawable/bgrounded"
+                        android:textColor="@color/colorMediumGray"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/reg_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Номер телефона"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+
+                    <Button
+                        android:id="@+id/addnumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textStart"
+                        android:layout_gravity="start"
+                        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                        android:drawablePadding="15dp"
+                        android:text="Добавить"
+                        android:background="@drawable/bgrounded"
+                        android:textColor="@color/colorMediumGray"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="4dp"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryBlue"
+                android:padding="4dp"
+                android:text="Учетная запись"
+                android:textColor="@color/accent_color"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="Пароль"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+                <EditText
+                    android:id="@+id/checkpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text"
+                android:drawablePadding="5dp"
+                android:elevation="8dp"
+                android:ems="10"
+                android:hint="Введите повторно пароль"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingStart="8dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:stateListAnimator="@null"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:targetApi="o" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryBlue"
+                android:padding="4dp"
+                android:text="Оплата"
+                android:textColor="@color/accent_color"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/cardnumber"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Номер карты"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+
+                    <EditText
+                        android:id="@+id/expiredate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text"
+                        android:drawablePadding="5dp"
+                        android:elevation="8dp"
+                        android:ems="10"
+                        android:hint="Срок дейтвие"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="8dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="10dp"
+                        android:stateListAnimator="@null"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/carduser"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="ФИО"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+
+                <EditText
+                    android:id="@+id/сvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text"
+                    android:drawablePadding="5dp"
+                    android:elevation="8dp"
+                    android:ems="10"
+                    android:hint="CVV"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="10dp"
+                    android:stateListAnimator="@null"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    tools:targetApi="o" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-</ScrollView>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:id="@+id/create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создать"
+        android:theme="@style/ButtonTheme"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/background_signup"
+        android:textColor="#fff"/>
+</LinearLayout>
+    </ScrollView>

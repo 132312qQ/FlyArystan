@@ -1,6 +1,7 @@
 package com.example.fly_arystan.Api;
 
 import com.example.fly_arystan.Model.Ticket;
+import com.example.fly_arystan.Model.UserRegister;
 
 import java.util.List;
 import java.util.Map;
@@ -17,26 +18,8 @@ import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
 public interface TicketApi {
-    @GET("categories/")
-    Call<List<Ticket>> getticket(
+    @GET("price")
+    Call<Ticket> createTicket(@Query("to") String name,
+                              @Query("from") String surname
     );
-
-
-    @GET("products/cat/{id}")
-    Call<Ticket> getCategorybyID(
-            @Path("id") String id
-    );
-
-
-    @GET("posts")
-    Call<List<Ticket>> getPosts(
-            @Query("userId") Integer[] userId,
-            @Query("_sort") String sort,
-            @Query("_order") String order
-    );
-
-
-    @FormUrlEncoded
-    @POST("price")
-    Call<Ticket> createPost(@FieldMap Map<String, String> fields);
 }
