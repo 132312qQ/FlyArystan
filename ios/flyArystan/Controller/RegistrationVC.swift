@@ -22,6 +22,9 @@ struct rStruct: Codable {
     var password2: String
     var national_id: String
 }
+struct fStruct: Codable {
+    var status: String
+}
 
 class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var statusPicker: UIPickerView!
@@ -120,29 +123,21 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                                   national_id: national_id)
             do {
                 let jsonData = try JSONEncoder().encode(struct1)
-                var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(LIST_URL)")!) // Configure in a right way
+                print(String(data: jsonData, encoding: .utf8))
+                var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(REGISTER)")!) // Configure in a right way
                 urlRequest.httpMethod = "POST"
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 
-                let task = URLSession.shared.uploadTask(with: urlRequest, from: jsonData) { (data, response, error) in
-                    //
-                    if let error = error {
-                        print("!!Error!!:\(error.localizedDescription)")
-                        return
-                    }
-                    //
-                    if let response = response as? HTTPURLResponse {
-                        print("!!Response!!: \(response.allHeaderFields), StatusCode: \(response.statusCode)")
-                    } else {
-                        print("!!Error in response!!)")
-                        return
-                    }
-                    //
-                    if let data = data, let string = String(data: data, encoding: .utf8) {
-                        print(string)
-                    }
+                let task = URLSession.shared.uploadTask(with: urlRequest, from: jsonData){ (data, response, error) in
+                    let data1 = try! JSONDecoder().decode(fStruct.self, from: data!)
+                        
+                        if data1.status == "success"{
+                            self.performSegue(withIdentifier: "segueId2", sender: nil)
+                        }
+                    
                     
                 }
-                //task.resume()
+                task.resume()
                 print(struct1.birth)
             } catch {
                 print(error.localizedDescription)

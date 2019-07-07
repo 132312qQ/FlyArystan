@@ -151,7 +151,7 @@ class BuyVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             nation = "KZ"
         }
         
-        let struct1 = structForBuy(to: "Тараз", from: "Алматы", gender: 1, name: "Adilbek", surname: "Baktiyar", day: "25", month: "9", year: "1999", nation: "KZ", doctype: "natID", docnumber: "040178888", tel: "77759527800", email: "baktiyarov_adilbek@mail.ru", carduser: "AMANTAY ORYNBAYEV", cardnum: "5578342725090499", cardMonth: "09", cardYear: "22", cvv: "320")
+        let struct1 = structForBuy(to: to, from: from, gender: gender, name: name, surname: surname, day: day, month: month, year: year, nation: nation, doctype: doctype, docnumber: docnumber, tel: tel, email: email, carduser: carduser, cardnum: cardnum, cardMonth: cardMonth, cardYear: cardYear, cvv: cvv)
         print(struct1.name)
         print(struct1.carduser)
         
@@ -159,6 +159,7 @@ class BuyVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             let jsonData = try JSONEncoder().encode(struct1)
             var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(BUY)")!) // Configure in a right way
             urlRequest.httpMethod = "POST"
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
             
             let task = URLSession.shared.uploadTask(with: urlRequest, from: jsonData) { (data, response, error) in
                 //
@@ -174,9 +175,11 @@ class BuyVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
                     return
                 }
                 //
-                if let data1 = data, let string = String(data: data1, encoding: .utf8) {
-                    print(string)
-                }
+                
+                let data1 = try! JSONDecoder().decode([String: String].self, from: data!)
+                let url = URL(string: data1["3dsecure"]!)!
+                self.performSegue(withIdentifier: "segueId3", sender: url)
+                
                 
             }
             task.resume()
@@ -189,16 +192,21 @@ class BuyVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
     }
     
-    /*
-    // MARK: - Navigation
+    
+    
+ 
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+// MARK: - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
+    if let destination = segue.destination as? WebVC, let url = sender as? URL
+    {
+        destination.url = url
     }
-    */
-
 }
 
 extension String {
