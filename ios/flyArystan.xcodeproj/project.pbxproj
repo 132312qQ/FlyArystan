@@ -21,9 +21,18 @@
 		1B84E90622D09B9300CA098C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B84E90422D09B9300CA098C /* LaunchScreen.storyboard */; };
 		1B84E91222D09CAF00CA098C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84E91122D09CAF00CA098C /* Constants.swift */; };
 		1BB720A422D1B86500DFE673 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB720A322D1B86500DFE673 /* InfoViewController.swift */; };
+		1BE323BD22D6100100BD0854 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE323BC22D6100100BD0854 /* Buy.storyboard */; };
+		1BE323BF22D6100F00BD0854 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE323BE22D6100F00BD0854 /* Register.storyboard */; };
+		1BE323C122D6101E00BD0854 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE323C022D6101E00BD0854 /* Help.storyboard */; };
+		1BE323C322D6102F00BD0854 /* Status.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE323C222D6102F00BD0854 /* Status.storyboard */; };
+		1BE323C522D6103B00BD0854 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE323C422D6103B00BD0854 /* Auth.storyboard */; };
+		1BE323C722D61ACA00BD0854 /* StructsForJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE323C622D61ACA00BD0854 /* StructsForJSON.swift */; };
+		CC2785F940983FF044075380 /* libPods-flyArystan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 929DDA5DCAFDFB08B8B3433A /* libPods-flyArystan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0964CEA77F888FC2E54AF279 /* Pods-flyArystan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flyArystan.release.xcconfig"; path = "Target Support Files/Pods-flyArystan/Pods-flyArystan.release.xcconfig"; sourceTree = "<group>"; };
+		1953DBB54BFE0DDF0CF518FF /* Pods-flyArystan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flyArystan.debug.xcconfig"; path = "Target Support Files/Pods-flyArystan/Pods-flyArystan.debug.xcconfig"; sourceTree = "<group>"; };
 		1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		1B72FD0922D1200900A73D22 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		1B72FD1322D1425E00A73D22 /* BuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyVC.swift; sourceTree = "<group>"; };
@@ -40,6 +49,13 @@
 		1B84E90722D09B9300CA098C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B84E91122D09CAF00CA098C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1BB720A322D1B86500DFE673 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1BE323BC22D6100100BD0854 /* Buy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
+		1BE323BE22D6100F00BD0854 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		1BE323C022D6101E00BD0854 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		1BE323C222D6102F00BD0854 /* Status.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Status.storyboard; sourceTree = "<group>"; };
+		1BE323C422D6103B00BD0854 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		1BE323C622D61ACA00BD0854 /* StructsForJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructsForJSON.swift; sourceTree = "<group>"; };
+		929DDA5DCAFDFB08B8B3433A /* libPods-flyArystan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-flyArystan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2785F940983FF044075380 /* libPods-flyArystan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +75,8 @@
 			children = (
 				1B84E8FA22D09B9200CA098C /* flyArystan */,
 				1B84E8F922D09B9200CA098C /* Products */,
+				FB30612DA9214C20F24EEE46 /* Pods */,
+				6A7477DB70D0CC44943132F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,13 +91,12 @@
 		1B84E8FA22D09B9200CA098C /* flyArystan */ = {
 			isa = PBXGroup;
 			children = (
+				1BE323BB22D60FA500BD0854 /* storyboards */,
 				1B84E90F22D09C9200CA098C /* Model */,
 				1B84E90E22D09C8B00CA098C /* View */,
 				1B84E90D22D09C8300CA098C /* Controller */,
 				1B84E8FB22D09B9200CA098C /* AppDelegate.swift */,
-				1B84E8FF22D09B9200CA098C /* Main.storyboard */,
 				1B84E90222D09B9300CA098C /* Assets.xcassets */,
-				1B84E90422D09B9300CA098C /* LaunchScreen.storyboard */,
 				1B84E90722D09B9300CA098C /* Info.plist */,
 			);
 			path = flyArystan;
@@ -111,8 +129,40 @@
 			isa = PBXGroup;
 			children = (
 				1B84E91122D09CAF00CA098C /* Constants.swift */,
+				1BE323C622D61ACA00BD0854 /* StructsForJSON.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1BE323BB22D60FA500BD0854 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1B84E90422D09B9300CA098C /* LaunchScreen.storyboard */,
+				1B84E8FF22D09B9200CA098C /* Main.storyboard */,
+				1BE323BC22D6100100BD0854 /* Buy.storyboard */,
+				1BE323BE22D6100F00BD0854 /* Register.storyboard */,
+				1BE323C022D6101E00BD0854 /* Help.storyboard */,
+				1BE323C222D6102F00BD0854 /* Status.storyboard */,
+				1BE323C422D6103B00BD0854 /* Auth.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		6A7477DB70D0CC44943132F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				929DDA5DCAFDFB08B8B3433A /* libPods-flyArystan.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB30612DA9214C20F24EEE46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1953DBB54BFE0DDF0CF518FF /* Pods-flyArystan.debug.xcconfig */,
+				0964CEA77F888FC2E54AF279 /* Pods-flyArystan.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B84E90A22D09B9300CA098C /* Build configuration list for PBXNativeTarget "flyArystan" */;
 			buildPhases = (
+				9FF878DC98CD4E65078826B7 /* [CP] Check Pods Manifest.lock */,
 				1B84E8F422D09B9200CA098C /* Sources */,
 				1B84E8F522D09B9200CA098C /* Frameworks */,
 				1B84E8F622D09B9200CA098C /* Resources */,
@@ -173,13 +224,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE323C522D6103B00BD0854 /* Auth.storyboard in Resources */,
 				1B84E90622D09B9300CA098C /* LaunchScreen.storyboard in Resources */,
+				1BE323C122D6101E00BD0854 /* Help.storyboard in Resources */,
+				1BE323BD22D6100100BD0854 /* Buy.storyboard in Resources */,
 				1B84E90322D09B9300CA098C /* Assets.xcassets in Resources */,
 				1B84E90122D09B9200CA098C /* Main.storyboard in Resources */,
+				1BE323C322D6102F00BD0854 /* Status.storyboard in Resources */,
+				1BE323BF22D6100F00BD0854 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FF878DC98CD4E65078826B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flyArystan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B84E8F422D09B9200CA098C /* Sources */ = {
@@ -190,6 +271,7 @@
 				1BB720A422D1B86500DFE673 /* InfoViewController.swift in Sources */,
 				1B72FD1A22D1976D00A73D22 /* HelpVC.swift in Sources */,
 				1B72FD0A22D1200900A73D22 /* SearchVC.swift in Sources */,
+				1BE323C722D61ACA00BD0854 /* StructsForJSON.swift in Sources */,
 				1B72FD1822D18E5600A73D22 /* CheckVC.swift in Sources */,
 				1B84E8FC22D09B9200CA098C /* AppDelegate.swift in Sources */,
 				1B72FD1C22D19DDC00A73D22 /* LoginVC.swift in Sources */,
@@ -340,6 +422,7 @@
 		};
 		1B84E90B22D09B9300CA098C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1953DBB54BFE0DDF0CF518FF /* Pods-flyArystan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -358,6 +441,7 @@
 		};
 		1B84E90C22D09B9300CA098C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0964CEA77F888FC2E54AF279 /* Pods-flyArystan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

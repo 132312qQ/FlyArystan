@@ -1,0 +1,6 @@
+module Pods_flyArystan {
+  umbrella header "Pods-flyArystan-umbrella.h"
+
+  export *
+  module * { export * }
+}

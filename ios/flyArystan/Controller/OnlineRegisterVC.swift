@@ -7,11 +7,8 @@
 //
 
 import UIKit
-struct structForOR: Codable{
-    var number: String
-    var name: String
-    var surname: String
-}
+import TextFieldEffects
+
 class OnlineRegisterVC: UIViewController {
 
     @IBOutlet weak var numberF: UITextField!
@@ -22,7 +19,10 @@ class OnlineRegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        numberF.borderStyle = .none
+        nameF.borderStyle = .none
+        surnameF.borderStyle = .none
+        
         // Do any additional setup after loading the view.
     }
     

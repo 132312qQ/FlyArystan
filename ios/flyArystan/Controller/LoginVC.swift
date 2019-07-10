@@ -7,14 +7,6 @@
 //
 
 import UIKit
-struct structForLogin: Codable {
-    var mobile: String
-    var password: String
-}
-
-struct structFromLogin: Codable {
-    var status: String
-}
 
 class LoginVC: UIViewController {
 

@@ -7,24 +7,7 @@
 //
 
 import UIKit
-struct rStruct: Codable {
-    var name: String
-    var surname: String
-    var status: String
-    var lang: String
-    var birth: String
-    var country: String
-    var passport: String
-    var expireDate: String
-    var mail: String
-    var mobile: String
-    var password1: String
-    var password2: String
-    var national_id: String
-}
-struct fStruct: Codable {
-    var status: String
-}
+
 
 class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var statusPicker: UIPickerView!
@@ -55,8 +38,8 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         statusPicker.dataSource = self
         langPicker.dataSource = self
         countryPicker.dataSource = self
-        print("LOOOK")
-        print(statusPicker.selectedRow(inComponent: 0))
+        
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

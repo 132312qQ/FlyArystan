@@ -7,23 +7,24 @@
 //
 
 import UIKit
-struct structForHelp: Codable {
-    var name: String
-    var mail: String
-    var ticket_number: String
-    var message: String
-}
+import RSKGrowingTextView
 
 class HelpVC: UIViewController {
 
     
-    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var messageTextView: RSKGrowingTextView!
     @IBOutlet weak var tickec_numberField: UITextField!
     @IBOutlet weak var mailField: UITextField!
     @IBOutlet weak var nameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tickec_numberField.borderStyle = .none
+        mailField.borderStyle = .none
+        nameField.borderStyle = .none
+        messageTextView.placeholder = "Message"
+        messageTextView.placeholderColor = UIColor.red
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func butonTapped(_ sender: Any) {

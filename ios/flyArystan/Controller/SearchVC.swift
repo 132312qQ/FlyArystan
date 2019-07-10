@@ -7,16 +7,7 @@
 //
 
 import UIKit
-struct structFS: Codable {
-    var from: String
-    var to: String
-    //var date: String
-}
-struct structFromServer: Codable {
-    var price: String
-    var timeGo: String
-    var timeOut: String
-}
+
 class SearchVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     

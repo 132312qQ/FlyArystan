@@ -1,0 +1,24 @@
+PODS:
+  - RSKGrowingTextView (5.0.1):
+    - RSKPlaceholderTextView (= 5.0.1)
+  - RSKPlaceholderTextView (5.0.1)
+  - TextFieldEffects (1.6.0)
+
+DEPENDENCIES:
+  - RSKGrowingTextView
+  - TextFieldEffects
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RSKGrowingTextView
+    - RSKPlaceholderTextView
+    - TextFieldEffects
+
+SPEC CHECKSUMS:
+  RSKGrowingTextView: d6ba59971475cab0d9a281fb1acce72df7b54445
+  RSKPlaceholderTextView: d5d534676ab37c7d6a7722a4c9b6bed2a5c66913
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+
+PODFILE CHECKSUM: 87d769964289a62789f8534d640552d7fb9f43a3
+
+COCOAPODS: 1.6.0.rc.2

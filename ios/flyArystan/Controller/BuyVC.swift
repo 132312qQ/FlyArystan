@@ -7,26 +7,7 @@
 //
 
 import UIKit
-struct structForBuy: Codable {
-    var to: String
-    var from: String
-    var gender: Int
-    var name: String
-    var surname: String
-    var day: String
-    var month: String
-    var year: String
-    var nation: String
-    var doctype: String
-    var docnumber: String
-    var tel: String
-    var email: String
-    var carduser: String
-    var cardnum: String
-    var cardMonth: String
-    var cardYear: String
-    var cvv: String
-}
+
 class BuyVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     

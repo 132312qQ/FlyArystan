@@ -7,20 +7,7 @@
 //
 
 import UIKit
-struct structForCheckStatus: Codable {
-    var from: String
-    var to: String
-    var day: String
-}
 
-struct FromCheckStatus: Codable {
-    var flight: String
-    var from1: String
-    var from2: String
-    var to1: String
-    var to2: String
-    var message: String
-}
 class CheckVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var toWhere: UIPickerView!
