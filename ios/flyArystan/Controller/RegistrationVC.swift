@@ -104,34 +104,8 @@ class RegistrationVC: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
                                   password1: password1,
                                   password2: password2,
                                   national_id: national_id)
-            do {
-                let jsonData = try JSONEncoder().encode(struct1)
-                print(String(data: jsonData, encoding: .utf8))
-                var urlRequest = URLRequest(url: URL(string: "\(BASE_URL)\(REGISTER)")!) // Configure in a right way
-                urlRequest.httpMethod = "POST"
-                urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-                
-                let task = URLSession.shared.uploadTask(with: urlRequest, from: jsonData){ (data, response, error) in
-                    let data1 = try! JSONDecoder().decode(fStruct.self, from: data!)
-                    
-                    DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "Status", message: "Status: \(data1.status)", preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-                        
-                        self.present(alert, animated: true, completion: nil)
-                        
-                        
-                    }
-                    
-                    
-                }
-                task.resume()
-                print(struct1.birth)
-            } catch {
-                print(error.localizedDescription)
-            }
-
-        
+            let person = PersonToRegister(person: struct1)
+            person.register(vc: self)
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5C0F1C22D63B1000212776 /* PersonToRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5C0F1B22D63B1000212776 /* PersonToRegister.swift */; };
 		1B72FD0622D0F63700A73D22 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */; };
 		1B72FD0A22D1200900A73D22 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72FD0922D1200900A73D22 /* SearchVC.swift */; };
 		1B72FD1422D1425E00A73D22 /* BuyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B72FD1322D1425E00A73D22 /* BuyVC.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0964CEA77F888FC2E54AF279 /* Pods-flyArystan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flyArystan.release.xcconfig"; path = "Target Support Files/Pods-flyArystan/Pods-flyArystan.release.xcconfig"; sourceTree = "<group>"; };
 		1953DBB54BFE0DDF0CF518FF /* Pods-flyArystan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flyArystan.debug.xcconfig"; path = "Target Support Files/Pods-flyArystan/Pods-flyArystan.debug.xcconfig"; sourceTree = "<group>"; };
+		1B5C0F1B22D63B1000212776 /* PersonToRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonToRegister.swift; sourceTree = "<group>"; };
 		1B72FD0522D0F63700A73D22 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		1B72FD0922D1200900A73D22 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		1B72FD1322D1425E00A73D22 /* BuyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyVC.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		1B84E90F22D09C9200CA098C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1B5C0F1B22D63B1000212776 /* PersonToRegister.swift */,
 				1B84E91122D09CAF00CA098C /* Constants.swift */,
 				1BE323C622D61ACA00BD0854 /* StructsForJSON.swift */,
 			);
@@ -275,6 +278,7 @@
 				1B72FD1822D18E5600A73D22 /* CheckVC.swift in Sources */,
 				1B84E8FC22D09B9200CA098C /* AppDelegate.swift in Sources */,
 				1B72FD1C22D19DDC00A73D22 /* LoginVC.swift in Sources */,
+				1B5C0F1C22D63B1000212776 /* PersonToRegister.swift in Sources */,
 				1B72FD1E22D1A6C500A73D22 /* OnlineRegisterVC.swift in Sources */,
 				1B72FD1622D17F3100A73D22 /* WebVC.swift in Sources */,
 				1B72FD0622D0F63700A73D22 /* RegistrationVC.swift in Sources */,
