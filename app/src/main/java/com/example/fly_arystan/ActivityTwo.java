@@ -34,14 +34,14 @@ public class ActivityTwo extends AppCompatActivity {
 
     private EditText nam;
     private EditText surnam;
-    private EditText birt;
-    private EditText national;
+    private EditText carduser;
+    private EditText cardnumber;
     private EditText passpor;
-    private EditText expire_dat;
+    private EditText cardmonth;
     private EditText mai;
     private EditText mobil;
-    private EditText passwor1;
-    private EditText passwor2;
+    private EditText cardyear;
+    private EditText code;
 
     private String toid;
     private String fromid;
@@ -56,14 +56,15 @@ public class ActivityTwo extends AppCompatActivity {
 
         nam = findViewById(R.id.reg_name);
         surnam = findViewById(R.id.reg_surname);
-//        birt = findViewById(R.id.birth);
-//        national = findViewById(R.id.national_id);
-//        passpor = findViewById(R.id.passport);
-//        expire_dat = findViewById(R.id.expire_date);
-//        mai = findViewById(R.id.mail);
-//        mobil = findViewById(R.id.mobile);
-//        passwor1 = findViewById(R.id.password1);
-//        passwor2 = findViewById(R.id.password2);
+        carduser = findViewById(R.id.carduser);
+        cardnumber = findViewById(R.id.cardnumber);
+        passpor = findViewById(R.id.reg_pasportnumber);
+        cardmonth = findViewById(R.id.cardmonth);
+        mai = findViewById(R.id.reg_mail);
+        mobil = findViewById(R.id.reg_number);
+        cardyear = findViewById(R.id.cardyear);
+        code = findViewById(R.id.code);
+
 
         Intent intent = getIntent();
         toid= intent.getStringExtra("to");
@@ -80,14 +81,14 @@ public class ActivityTwo extends AppCompatActivity {
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:100/")
+                .baseUrl("http://10.0.2.2:999/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
 
 
-        System.out.println("<>" + toid);
-        System.out.println("<><>" + fromid);
+//        System.out.println("<>" + toid);
+//        System.out.println("<><>" + fromid);
 
         buyApi = retrofit.create(BuyApi.class);
 
@@ -96,7 +97,18 @@ public class ActivityTwo extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println("<><><><><>" + toid);
                 System.out.println("<><><>><><><" + fromid);
-                createPost(toid,fromid,nam.getText().toString(),surnam.getText().toString(),"22","11","2019","423423432","7082923171","nursbrat991229@gmail.com","Nursultan","5578342712280566","09","22","011");
+                createPost(toid,fromid,
+                        nam.getText().toString(),
+                        surnam.getText().toString(),
+                        "22","11","2019",
+                        passpor.getText().toString(),
+                        mobil.getText().toString(),
+                        mai.getText().toString(),
+                        carduser.getText().toString(),
+                        cardnumber.getText().toString(),
+                        cardmonth.getText().toString(),
+                        cardyear.getText().toString(),
+                        code.getText().toString());
             }
         });
 

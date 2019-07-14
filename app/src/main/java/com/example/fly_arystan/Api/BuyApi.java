@@ -18,30 +18,6 @@ import retrofit2.http.Query;
 
 public interface BuyApi {
 
-//    @GET("buy")
-//    Call<BuyTicket> buy(@Query("to") String to,
-//                        @Query("from") String from,
-//                        @Query("name") String name,
-//                        @Query("surname") String surname,
-//                        @Query("day") String day,
-//                        @Query("month") String month,
-//                        @Query("year") String year,
-//                        @Query("docnumber") String docnumber,
-//                        @Query("tel") String tel,
-//                        @Query("email") String email,
-//                        @Query("carduser") String carduser,
-//                        @Query("cardnum") String cardnum,
-//                        @Query("cardMonth") String cardMonth,
-//                        @Query("cardYear") String cardYear,
-//                        @Query("cvv") String cvv
-//    );
-
-
-//    @FormUrlEncoded
-//    @POST("posts")
-//    Call<Post> createPost(@FieldMap Map<String, String> fields);
-
-
     @POST("buy")
     Call<BuyTicket> buy(@Body BuyTicket buyTicket);
 

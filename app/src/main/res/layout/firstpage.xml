@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/rectangle_4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="148dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="269dp"
+        android:background="@drawable/rectangle_4"
+        />
+
+    <vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:aapt="http://schemas.android.com/aapt"
+        android:width="80dp"
+        android:height="80dp"
+        android:viewportWidth="80"
+        android:viewportHeight="80"
+        >
+        <group>
+
+            <clip-path
+                android:pathData="M0 0H80V80H0V0Z"
+                />
+
+        </group>
+
+    </vector>
+
+
+</RelativeLayout>

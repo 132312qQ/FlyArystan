@@ -20,4 +20,31 @@
         <item name="android:background">@drawable/ripple_effect</item>
     </style>
 
+
+
+    <style name="tse">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #828282
+        </item>
+
+    </style>
+
+    <style name="some_id">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #001E62
+        </item>
+
+    </style>
+
+
 </resources>

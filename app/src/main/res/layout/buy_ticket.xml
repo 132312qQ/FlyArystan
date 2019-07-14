@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/containerRoundFlyingFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:background="@drawable/bgrounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Откуда"
+                                android:textSize="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_vertical"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_flight_takeoff_black_24dp"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="15dp"
+                                    />
+
+                                <Spinner
+                                    android:id="@+id/spinner_flight_from"
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent">
+                                </Spinner>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="15dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:text="TSE"
+                                    />
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/vector_stro"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/vector"
+                                />
+                        </LinearLayout>
+
+
+                        <View
+                            android:id="@+id/devider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/black"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/containerRoundFlyingTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:background="@drawable/bgrounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Куда"
+                                android:textSize="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_vertical"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_flight_land_black_24dp"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="15dp"/>
+
+                                <Spinner
+                                    android:id="@+id/spinner_flight_to"
+                                    android:layout_width="300dp"
+                                    android:layout_height="match_parent">
+
+                                </Spinner>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="15dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:text="ALA"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/black"
+                            />
+
+
+                        <LinearLayout
+                            android:id="@+id/date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="15dp"
+                            android:background="@drawable/bgrounded">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:id="@+id/depart_date"
+                                    android:layout_width="171dp"
+                                    android:layout_height="88dp"
+                                    android:background="@drawable/depart_date"
+                                    />
+
+
+                                <View
+                                    android:id="@+id/return_date"
+                                    android:layout_width="172dp"
+                                    android:layout_height="88dp"
+                                    android:layout_marginLeft="35dp"
+                                    android:background="@drawable/return_date"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/black"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp"
+                            android:background="@drawable/bgrounded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Пассажиры"
+                                android:textSize="15dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center_vertical"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="15dp"
+                                    android:paddingRight="15dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:text="1 взрослый"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/black"
+                            />
+
+                        <Button
+                            android:id="@+id/btnSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:background="@color/primaryBlue"
+                            android:textColor="@color/colorInverted"
+                            android:text="Найты рейсы"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:fontFamily="sans-serif"/>
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

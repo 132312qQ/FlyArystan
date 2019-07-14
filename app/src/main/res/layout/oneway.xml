@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginLeft="15dp"
+                android:text="Пассажиры"
+                android:textSize="25sp"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/clear"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginLeft="20dp"
+                android:text="Взрослый"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="11+ лет"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginLeft="20dp"
+                android:text="Ребенок"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="2-11 лет"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:padding="4dp"
+                android:layout_marginLeft="20dp"
+                android:text="Младенец"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="0-2 года"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <Button
+            android:layout_gravity="bottom"
+            android:id="@+id/create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Готова"
+            android:theme="@style/ButtonTheme"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_signup"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</ScrollView>

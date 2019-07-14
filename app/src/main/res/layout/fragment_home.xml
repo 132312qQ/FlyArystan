@@ -500,7 +500,7 @@
                     tools:targetApi="o" />
 
                 <EditText
-                    android:id="@+id/сvv"
+                    android:id="@+id/cvvcode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -511,7 +511,6 @@
                     android:elevation="8dp"
                     android:ems="10"
                     android:hint="CVV"
-                    android:importantForAutofill="no"
                     android:inputType="text"
                     android:paddingStart="8dp"
                     android:paddingTop="10dp"
@@ -519,7 +518,7 @@
                     android:paddingBottom="10dp"
                     android:stateListAnimator="@null"
                     android:textAppearance="?android:textAppearanceMedium"
-                    tools:targetApi="o" />
+                     />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
